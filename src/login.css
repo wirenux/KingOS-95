@@ -1,0 +1,48 @@
+.login-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.login-main {
+    flex-grow: 1;
+}
+
+.login-instruction {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.login-field {
+    margin-bottom: 8px;
+}
+
+.login-field label {
+    display: inline-block;
+    width: 75px;
+    text-align: left;
+}
+
+.login-field input {
+    flex-grow: 1;
+}
+
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 75px;
+}
+
+.login-actions button {
+    width: 100%;
+    padding: 2px 12px;
+}
+
+.underline {
+    text-decoration: underline;
+}
