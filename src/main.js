@@ -1,5 +1,6 @@
 import './style.css'
 import { renderLoginScreen } from './components/LoginScreen'
+import { renderDesktop } from './components/DesktopScreen';
 
 export function makeDragable(windowEl, titlebarEl) {
   if (!windowEl || !titlebarEl) {
@@ -11,7 +12,6 @@ export function makeDragable(windowEl, titlebarEl) {
   }
 
   titlebarEl.addEventListener('mousedown', (e) => {
-
     if (e.target.closest('button') || e.target.closest('.win-btn') || windowEl.classList.contains('maximized')) {
       return;
     }
@@ -66,7 +66,7 @@ const AppState = {
   DESKTOP: 'DESKTOP'
 }
 
-let currentState = AppState.LOGIN; // TODO: change to boot later
+let currentState = AppState.DESKTOP; // TODO: change to boot later
 
 export function changeState(newState) {
   currentState = newState;
@@ -80,19 +80,32 @@ export function changeState(newState) {
     case AppState.LOGIN:
       renderLoginScreen(appContainer);
 
-      const loginWindow = document.querySelector('.window');
+      const loginWindow = document.querySelector('.loginWindow');
       const titleBar = document.querySelector('.title-bar');
 
       if (loginWindow && titleBar) {
-        makeDragable(loginWindow, titleBar);
-      }
+        requestAnimationFrame(() => {
+          const scale = 1.25;
 
+          const winWidth = loginWindow.offsetWidth;
+          const winHeight = loginWindow.offsetHeight;
+
+          const centerX = ((window.innerWidth / scale) - winWidth) / 2;
+          const centerY = ((window.innerHeight / scale) - winHeight) / 2;
+
+          loginWindow.style.left = `${centerX}px`;
+          loginWindow.style.top = `${centerY}px`;
+
+          makeDragable(loginWindow, titleBar);
+        });
+      }
       break;
     case AppState.DESKTOP:
+      renderDesktop(appContainer);
       break; // TODO: add renderDesktop
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  changeState(AppState.LOGIN) // TODO: change to AppState.BOOT
+  changeState(currentState) // TODO: change to AppState.BOOT
 })
