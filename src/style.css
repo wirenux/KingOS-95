@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "W95F";
+    src: url('/fonts/W95F.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  background-color: #008689;
+  font-family: 'W95F';
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+
+}
