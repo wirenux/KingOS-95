@@ -17,6 +17,19 @@
     margin-bottom: 14px;
 }
 
+.keyIcon {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    flex-shrink: 0;
+}
+
+.instruction-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
 .login-field {
     margin-bottom: 8px;
 }
