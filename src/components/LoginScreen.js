@@ -49,7 +49,13 @@ export function renderLoginScreen(parent) {
         const password = loginForm.password.value;
 
         if (username === 'kinger' && password === "quennie123") {
-            console.log("Log in");
+            changeState('DESKTOP');
         }
+    })
+
+    const cancelButton = document.getElementById('login-cancel');
+    cancelButton.addEventListener('click', () => {
+        loginForm.username.value = '';
+        loginForm.password.value = '';
     })
 }
