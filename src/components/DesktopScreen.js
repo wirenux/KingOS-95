@@ -30,10 +30,39 @@ export function renderDesktop(parent) {
             </button>
 
             <div id="start-menu">
-              <div class="start-menu-item">Test1</div>
-              <div class="start-menu-item">Test2</div>
-              <div class="start-menu-item">Test3</div>
-              <div class="start-menu-item">Test4</div>
+              <div class="start-sidebar">
+                <span class="start-sidebar-text">Windows<span class="version-text">98</span></span>
+              </div>
+
+              <div class="start-menu-content">
+                <div class="start-menu-item" data-action="programs">
+                  <img src="/icons/programs.png" class="menu-icon" onerror="this.style.display='none'"/>
+                  <span>Programs</span>
+                </div>
+                <div class="start-menu-item" data-action="favorites">
+                  <img src="/icons/favorite.png" class="menu-icon" onerror="this.style.display='none'"/>
+                  <span>Favorites</span>
+                </div>
+                <div class="start-menu-item" data-action="documents">
+                  <img src="/icons/documents.png" class="menu-icon" onerror="this.style.display='none'" style="transform: scale(1.5);"/>
+                  <span>Documents</span>
+                </div>
+                <div class="start-menu-item" data-action="settings">
+                  <img src="/icons/settings.png" class="menu-icon" onerror="this.style.display='none'" style="transform: scale(1.5);"/>
+                  <span>Settings</span>
+                </div>
+
+                <hr class="start-separator" />
+
+                <div class="start-menu-item" data-action="logoff">
+                  <img src="/icons/logoff.png" class="menu-icon" onerror="this.style.display='none'" style="transform: scale(1.5);"/>
+                  <span>Log Off Kinger...</span>
+                </div>
+                <div class="start-menu-item" data-action="shutdown">
+                  <img src="/icons/shutdown.png" class="menu-icon" onerror="this.style.display='none'"/>
+                  <span>Shut Down...</span>
+                </div>
+              </div>
             </div>
 
             <div id="taskbar-apps">
@@ -58,6 +87,20 @@ export function renderDesktop(parent) {
 
     document.addEventListener('click', () => {
       startMenu.classList.remove('show');
+    });
+
+    // Start menu item
+    const menuItems = parent.querySelectorAll('.start-menu-item');
+    menuItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const action = e.currentTarget.getAttribute('data-action');
+        if (action === 'logoff') {
+          // TODO: add an animation
+          changeState('LOGIN');
+        } else {
+          console.log(`Clicked on: ${action}`);
+        }
+      });
     });
 
     // Clock
