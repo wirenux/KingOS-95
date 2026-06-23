@@ -47,8 +47,21 @@ export function renderDesktop(parent) {
         </div>
     `
 
-    updateClock();
+    // Start Btn
+    const startBtn = parent.querySelector('.start-menu-btn');
+    const startMenu = parent.querySelector('#start-menu');
 
+    startBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startMenu.classList.toggle('show');
+    })
+
+    document.addEventListener('click', () => {
+      startMenu.classList.remove('show');
+    });
+
+    // Clock
+    updateClock();
     clearInterval(clockInterval);
     clockInterval = setInterval(updateClock, 1000);
 }
