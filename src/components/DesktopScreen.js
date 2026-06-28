@@ -51,7 +51,7 @@ export function renderDesktop(parent) {
 
           <div id="taskbar">
             <button class="start-menu-btn">
-              <img class="start-btn-image" src="/icons/logo.png" />
+              <img class="start-btn-image" src="/icons/canda.png" />
               <span>Start</span>
             </button>
 

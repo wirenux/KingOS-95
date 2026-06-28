@@ -110,6 +110,10 @@
     cursor: pointer;
 }
 
+.start-menu-btn span {
+  margin-top: 2px;
+}
+
 .start-btn-image {
     width: 18px;
     height: 18px;
