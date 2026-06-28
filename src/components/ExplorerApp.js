@@ -1,9 +1,11 @@
 import "../explorer.css"
 
+let currentPath = "C:\\CANDA"
+
 export const ExplorerApp = {
-    title: 'Exploring - My Computer',
-    icon: '/icons/search.png',
-    width: '520px',
+    title: currentPath,
+    icon: '/icons/open_folder.png',
+    width: '600px',
     height: '420px',
 
     render() {
@@ -22,48 +24,48 @@ export const ExplorerApp = {
                 <div class="explorer-content">
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Command</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Config</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Cookies</span>
                     </div>
 
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Cursor</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Favorites</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Characters</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Forms</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Help</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>History</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Java</span>
                     </div>
                     <div class="explorer-content-item">
                         <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>CANDA</span>
+                        <span>Media</span>
                     </div>
                 </div>
                 <div class="status-bar">
