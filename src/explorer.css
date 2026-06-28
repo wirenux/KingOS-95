@@ -54,11 +54,12 @@
     background-color: #FCFCFC;
     flex: 1 1 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    grid-template-columns: repeat(auto-fill, 74px);
     grid-auto-rows: 78px;
     gap: 10px 8px;
     padding: 8px 10px;
     align-content: start;
+    justify-content: start;
     overflow: auto;
     box-sizing: border-box;
 }

@@ -38,8 +38,8 @@ function getItemIcon(item) {
 export const ExplorerApp = {
     title: currentPath,
     icon: '/icons/open_folder.png',
-    width: '600px',
-    height: '420px',
+    width: '615px',
+    height: '505px',
 
     render() {
         const items = fileSystem.directories[currentPath] || [];
