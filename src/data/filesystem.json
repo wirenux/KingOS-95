@@ -36,6 +36,10 @@
     "C:\\CANDA\\Characters": [
         { "name": "AI", "type": "folder" },
         { "name": "CA_NeuralScans (Obsolete)", "type": "folder" }
+    ],
+    "C:\\CANDA\\Characters\\AI": [
+        { "name": "???", "type": "file"},
+        { "name": "CAINE", "type": "file"}
     ]
   }
 }

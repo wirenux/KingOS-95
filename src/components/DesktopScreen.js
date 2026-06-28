@@ -96,6 +96,10 @@ function spawnWindow(appConfig, parent) {
   windowEl.style.width = appConfig.width || '420px';
   windowEl.style.height = appConfig.height || '320px';
 
+  if (appConfig.startPath) {
+    windowEl.dataset.explorerPath = appConfig.startPath;
+  }
+
   windowEl.innerHTML = `
     <div class="title-bar">
       <div class="title-bar-left">
@@ -109,7 +113,7 @@ function spawnWindow(appConfig, parent) {
       </div>
     </div>
     <div class="window-body">
-      ${appConfig.render()}
+      ${appConfig.render(windowEl)}
     </div>
   `;
 

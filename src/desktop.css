@@ -101,7 +101,7 @@
 }
 
 .desktop-shortcut:active .shortcut-label {
-  background-color: #000000;
+  background-color: #000080;
   color: #ffffff;
   outline: 1px dotted #ffffff;
 }

@@ -1,7 +1,7 @@
 import "../explorer.css"
 import fileSystem from "../data/filesystem.json"
 
-let currentPath = fileSystem.currentPath;
+const ROOT_PATH = fileSystem.currentPath;
 
 const ICONS_BY_EXT = {
     ini: "/icons/config_file.png",
@@ -31,6 +31,14 @@ function getItemIcon(item) {
         return "/icons/folder.png";
     }
 
+    if (item.name === "CAINE") { // exception
+        return "/icons/application.png";
+    }
+
+    if (item.name === "???") { // exception
+        return "/icons/block.png";
+    }
+
     const extension = getItemExtension(item.name);
     return ICONS_BY_EXT[extension] || "/icons/unknow.png";
 }
@@ -43,23 +51,29 @@ function joinPath(parentPath, childName) {
     return `${parentPath}\\${childName}`;
 }
 
+function getWindowPath(windowEl) {
+    return windowEl.dataset.explorerPath || ROOT_PATH;
+}
+
 function renderExplorerWindow(windowEl) {
+    const currentPath = getWindowPath(windowEl);
     const windowBody = windowEl.querySelector('.window-body');
     const titleBarText = windowEl.querySelector('.title-bar-text');
 
-    ExplorerApp.title = currentPath;
-    windowBody.innerHTML = ExplorerApp.render();
+    windowBody.innerHTML = ExplorerApp.render(windowEl);
     titleBarText.textContent = currentPath;
-    ExplorerApp.init(windowEl);
+    ExplorerApp.init(windowEl, currentPath);
 }
 
 export const ExplorerApp = {
-    title: currentPath,
+    title: ROOT_PATH,
     icon: '/icons/open_folder.png',
     width: '615px',
     height: '505px',
+    startPath: ROOT_PATH,
 
-    render() {
+    render(windowEl) {
+        const currentPath = getWindowPath(windowEl || { dataset: {} });
         const items = getDirectoryItems(currentPath);
         const nbOfFiles = items.length;
         const totalSizeKB = items
@@ -100,6 +114,12 @@ export const ExplorerApp = {
     },
 
     init(windowEl) {
+        if (!windowEl.dataset.explorerPath) {
+            windowEl.dataset.explorerPath = ROOT_PATH;
+        }
+
+        const currentPath = getWindowPath(windowEl);
+
         const itemElements = Array.from(windowEl.querySelectorAll('.explorer-content-item'));
         const explorerContent = windowEl.querySelector('.explorer-content');
         const statusCount = windowEl.querySelector('.js-status-count');
@@ -136,7 +156,7 @@ export const ExplorerApp = {
                 return;
             }
 
-            currentPath = nextPath;
+            windowEl.dataset.explorerPath = nextPath;
             renderExplorerWindow(windowEl);
         }
 
