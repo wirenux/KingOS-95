@@ -1,4 +1,5 @@
 import './style.css'
+import "98.css";
 import { renderLoginScreen } from './components/LoginScreen'
 import { renderDesktop } from './components/DesktopScreen';
 
