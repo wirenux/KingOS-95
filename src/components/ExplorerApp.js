@@ -4,8 +4,9 @@ import fileSystem from "../data/filesystem.json"
 const currentPath = fileSystem.currentPath;
 
 const ICONS_BY_EXT = {
-    ini: "/icons/settings.png",
-    txt: "/icons/documents.png"
+    ini: "/icons/config_file.png",
+    txt: "/icons/text_file.png",
+    exe: "/icons/application.png"
 };
 
 function formatSizeKB(size) {
