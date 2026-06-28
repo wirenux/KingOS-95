@@ -23,7 +23,6 @@
     box-shadow: none;
     color: #000;
     cursor: pointer;
-    font-family: 'W95F', sans-serif;
     font-size: 14px;
     line-height: 1;
     margin: 0 10px 0 0;
@@ -61,7 +60,6 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    font-family: 'W95F', sans-serif;
     font-size: 12px;
     line-height: 1;
 }
