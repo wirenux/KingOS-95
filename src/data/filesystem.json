@@ -1,0 +1,20 @@
+{
+  "currentPath": "C:\\CANDA",
+  "directories": {
+    "C:\\CANDA": [
+      { "name": "Command", "type": "folder" },
+      { "name": "Config", "type": "folder" },
+      { "name": "Cookies", "type": "folder" },
+      { "name": "Cursor", "type": "folder" },
+      { "name": "Favorites", "type": "folder" },
+      { "name": "Characters", "type": "folder" },
+      { "name": "Forms", "type": "folder" },
+      { "name": "Help", "type": "folder" },
+      { "name": "History", "type": "folder" },
+      { "name": "Java", "type": "folder" },
+      { "name": "Media", "type": "folder" },
+      { "name": "readme.txt", "type": "file", "sizeKB": 12 },
+      { "name": "system.ini", "type": "file", "sizeKB": 804 }
+    ]
+  }
+}

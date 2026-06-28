@@ -1,6 +1,29 @@
 import "../explorer.css"
+import fileSystem from "../data/filesystem.json"
 
-let currentPath = "C:\\CANDA"
+const currentPath = fileSystem.currentPath;
+
+const ICONS_BY_EXT = {
+    ini: "/icons/settings.png",
+    txt: "/icons/documents.png"
+};
+
+function getItemExtension(fileName) {
+    const lastDotIndex = fileName.lastIndexOf(".");
+    if (lastDotIndex <= 0 || lastDotIndex === fileName.length - 1) {
+        return "";
+    }
+    return fileName.slice(lastDotIndex + 1).toLowerCase();
+}
+
+function getItemIcon(item) {
+    if (item.type === "folder") {
+        return "/icons/folder.png";
+    }
+
+    const extension = getItemExtension(item.name);
+    return ICONS_BY_EXT[extension] || "/icons/documents.png";
+}
 
 export const ExplorerApp = {
     title: currentPath,
@@ -9,9 +32,24 @@ export const ExplorerApp = {
     height: '420px',
 
     render() {
-        let nbOfFiles = 13;
-        let unitForSizeOfFile = "KB"
-        let sizeOfFile = `816 ${unitForSizeOfFile}`;
+        const items = fileSystem.directories[currentPath] || [];
+        const nbOfFiles = items.length;
+        const totalSizeKB = items
+            .filter((item) => item.type === "file")
+            .reduce((total, item) => total + (item.sizeKB || 0), 0);
+        const sizeOfFile = `${totalSizeKB} KB`;
+
+        const itemsMarkup = items
+            .map((item) => {
+                const icon = getItemIcon(item);
+                return `
+                    <div class="explorer-content-item" data-type="${item.type}">
+                        <img class="explorer-content-icon" src="${icon}" alt="${item.type}">
+                        <span>${item.name}</span>
+                    </div>
+                `;
+            })
+            .join("");
 
         return `
             <div class="explorer-app">
@@ -22,51 +60,7 @@ export const ExplorerApp = {
                     <button.default class="option-bar-btn" type="button">Help</button.default>
                 </div>
                 <div class="explorer-content">
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Command</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Config</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Cookies</span>
-                    </div>
-
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Cursor</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Favorites</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Characters</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Forms</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Help</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>History</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Java</span>
-                    </div>
-                    <div class="explorer-content-item">
-                        <img class="explorer-content-icon" src="/icons/folder.png">
-                        <span>Media</span>
-                    </div>
+                    ${itemsMarkup}
                 </div>
                 <div class="status-bar">
                     <div class="status-bar-field">${nbOfFiles} object(s)</div>
