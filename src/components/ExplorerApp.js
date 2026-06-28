@@ -19,6 +19,53 @@ export const ExplorerApp = {
                     <button.default class="option-bar-btn" type="button">View</button.default>
                     <button.default class="option-bar-btn" type="button">Help</button.default>
                 </div>
+                <div class="explorer-content">
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                    <div class="explorer-content-item">
+                        <img class="explorer-content-icon" src="/icons/folder.png">
+                        <span>CANDA</span>
+                    </div>
+                </div>
                 <div class="status-bar">
                     <div class="status-bar-field">${nbOfFiles} object(s)</div>
                     <div class="status-bar-field">${sizeOfFile}</div>
@@ -28,7 +75,7 @@ export const ExplorerApp = {
     },
 
     init(windowEl) {
-        const items = windowEl.querySelectorAll('.explorer-item');
+        const items = windowEl.querySelectorAll('.explorer-content-item');
 
         items.forEach((item) => {
             item.addEventListener('click', () => {

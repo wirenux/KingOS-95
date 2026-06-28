@@ -46,6 +46,48 @@
     outline: none;
 }
 
+.explorer-content {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    grid-auto-rows: 78px;
+    gap: 10px 8px;
+    padding: 8px 10px;
+    align-content: start;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.explorer-content-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+}
+
+.explorer-content-item:hover .explorer-content-icon,
+.explorer-content-item:focus-visible .explorer-content-icon {
+    outline: 1px dotted #000;
+    outline-offset: 2px;
+}
+
+.explorer-content-item span {
+    font-size: 12px;
+    line-height: 1.05;
+    word-break: break-word;
+}
+
+.explorer-content-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
 .status-bar {
     display: flex;
     gap: 2px;
@@ -65,6 +107,6 @@
 }
 
 .status-bar-field:last-child {
-    flex-basis: 90px;
+    flex-basis: 110px;
     flex-grow: 0;
 }
