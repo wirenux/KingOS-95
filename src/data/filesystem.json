@@ -32,6 +32,10 @@
       { "name": "Black Color.bmp", "type": "file", "sizeKB": 256 },
       { "name": "Blue Color.bmp", "type": "file", "sizeKB": 12 },
       { "name": "Bubble.bmp", "type": "file", "sizeKB": 804 }
+    ],
+    "C:\\CANDA\\Characters": [
+        { "name": "AI", "type": "folder" },
+        { "name": "CA_NeuralScans (Obsolete)", "type": "folder" }
     ]
   }
 }

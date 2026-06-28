@@ -1,7 +1,7 @@
 import "../explorer.css"
 import fileSystem from "../data/filesystem.json"
 
-const currentPath = fileSystem.currentPath;
+let currentPath = fileSystem.currentPath;
 
 const ICONS_BY_EXT = {
     ini: "/icons/config_file.png",
@@ -35,6 +35,24 @@ function getItemIcon(item) {
     return ICONS_BY_EXT[extension] || "/icons/unknow.png";
 }
 
+function getDirectoryItems(path) {
+    return fileSystem.directories[path] || [];
+}
+
+function joinPath(parentPath, childName) {
+    return `${parentPath}\\${childName}`;
+}
+
+function renderExplorerWindow(windowEl) {
+    const windowBody = windowEl.querySelector('.window-body');
+    const titleBarText = windowEl.querySelector('.title-bar-text');
+
+    ExplorerApp.title = currentPath;
+    windowBody.innerHTML = ExplorerApp.render();
+    titleBarText.textContent = currentPath;
+    ExplorerApp.init(windowEl);
+}
+
 export const ExplorerApp = {
     title: currentPath,
     icon: '/icons/open_folder.png',
@@ -42,7 +60,7 @@ export const ExplorerApp = {
     height: '505px',
 
     render() {
-        const items = fileSystem.directories[currentPath] || [];
+        const items = getDirectoryItems(currentPath);
         const nbOfFiles = items.length;
         const totalSizeKB = items
             .filter((item) => item.type === "file")
@@ -109,10 +127,31 @@ export const ExplorerApp = {
             statusSize.textContent = type === 'file' ? formatSizeKB(sizeKB) : 'File Folder';
         }
 
+        function openFolder(item) {
+            const folderName = item.dataset.name;
+            const nextPath = joinPath(currentPath, folderName);
+            const nextItems = getDirectoryItems(nextPath);
+
+            if (nextItems.length === 0) {
+                return;
+            }
+
+            currentPath = nextPath;
+            renderExplorerWindow(windowEl);
+        }
+
         itemElements.forEach((item) => {
             item.addEventListener('click', (event) => {
                 event.stopPropagation();
                 selectItem(item);
+            });
+
+            item.addEventListener('dblclick', (event) => {
+                event.stopPropagation();
+
+                if (item.dataset.type === 'folder') {
+                    openFolder(item);
+                }
             });
         });
 
