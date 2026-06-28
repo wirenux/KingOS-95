@@ -57,7 +57,7 @@ export function renderDesktop(parent) {
 
             <div id="start-menu">
               <div class="start-sidebar">
-                <span class="start-sidebar-text">Windows<span class="version-text">98</span></span>
+                <span class="start-sidebar-text">C & A<span class="version-text">95</span></span>
               </div>
 
               <div class="start-menu-content">
