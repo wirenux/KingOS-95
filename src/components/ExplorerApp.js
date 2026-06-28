@@ -3,8 +3,8 @@ import "../explorer.css"
 export const ExplorerApp = {
     title: 'Exploring - My Computer',
     icon: '/icons/search.png',
-    width: '420px',
-    height: '320px',
+    width: '520px',
+    height: '420px',
 
     render() {
         let nbOfFiles = 13;

@@ -47,6 +47,11 @@
 }
 
 .explorer-content {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #FCFCFC;
+    border-right: 2px solid #FCFCFC;
+    background-color: #FCFCFC;
     flex: 1 1 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
