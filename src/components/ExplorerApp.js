@@ -172,6 +172,10 @@ export const ExplorerApp = {
                 if (item.dataset.type === 'folder') {
                     openFolder(item);
                 }
+
+                if (item.dataset.name === 'CAINE') {
+                    console.log("CAINE") // TODO: Change this to launch the caine app
+                }
             });
         });
 
