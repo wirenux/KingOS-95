@@ -271,6 +271,31 @@ export function renderDesktop(parent) {
     const startBtn = parent.querySelector('.start-menu-btn');
     const startMenu = parent.querySelector('#start-menu');
     const workspace = parent.querySelector('#workspace');
+    const desktopShortcuts = Array.from(parent.querySelectorAll('.desktop-shortcut'));
+
+    function clearDesktopSelection() {
+      desktopShortcuts.forEach((shortcut) => shortcut.classList.remove('is-selected'));
+    }
+
+    function selectDesktopShortcut(shortcut) {
+      clearDesktopSelection();
+      shortcut.classList.add('is-selected');
+    }
+
+    desktopShortcuts.forEach((shortcut) => {
+      shortcut.addEventListener('click', (event) => {
+        event.stopPropagation();
+        selectDesktopShortcut(shortcut);
+      });
+    });
+
+    if (workspace) {
+      workspace.addEventListener('click', (event) => {
+        if (event.target === workspace) {
+          clearDesktopSelection();
+        }
+      });
+    }
 
     startBtn.addEventListener('click', (e) => {
       e.stopPropagation();
