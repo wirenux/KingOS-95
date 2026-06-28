@@ -13,8 +13,25 @@
       { "name": "History", "type": "folder" },
       { "name": "Java", "type": "folder" },
       { "name": "Media", "type": "folder" },
-      { "name": "readme.txt", "type": "file", "sizeKB": 12 },
-      { "name": "system.ini", "type": "file", "sizeKB": 804 }
+      { "name": "Msapps", "type": "folder" },
+      { "name": "Msremote.sis", "type": "folder" },
+      { "name": "Occache", "type": "folder" },
+      { "name": "Options", "type": "folder" },
+      { "name": "SendTo", "type": "folder" },
+      { "name": "Start Menu", "type": "folder" },
+      { "name": "System", "type": "folder" },
+      { "name": "Temp", "type": "folder" },
+      { "name": "Temporary Internet Files", "type": "folder" },
+      { "name": "Wordview", "type": "folder" },
+      { "name": "Accessor.grp", "type": "file", "sizeKB": 12 },
+      { "name": "Accessor.grp", "type": "file", "sizeKB": 8 },
+      { "name": "AddInput.reg", "type": "file", "sizeKB": 4 },
+      { "name": "Aharris.pwl", "type": "file", "sizeKB": 16 },
+      { "name": "aharris.xlb", "type": "file", "sizeKB": 24 },
+      { "name": "Arp.exe", "type": "file", "sizeKB": 128 },
+      { "name": "Black Color.bmp", "type": "file", "sizeKB": 256 },
+      { "name": "Blue Color.bmp", "type": "file", "sizeKB": 12 },
+      { "name": "Bubble.bmp", "type": "file", "sizeKB": 804 }
     ]
   }
 }

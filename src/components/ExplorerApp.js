@@ -6,7 +6,12 @@ const currentPath = fileSystem.currentPath;
 const ICONS_BY_EXT = {
     ini: "/icons/config_file.png",
     txt: "/icons/text_file.png",
-    exe: "/icons/application.png"
+    exe: "/icons/application.png",
+    reg: "/icons/regedit_file.png",
+    bmp: "/icons/bitmap.png",
+    pwl: "/icons/canda.png",
+    xlb: "/icons/text_file.png",
+    grp: "/icons/group.png"
 };
 
 function formatSizeKB(size) {
@@ -27,7 +32,7 @@ function getItemIcon(item) {
     }
 
     const extension = getItemExtension(item.name);
-    return ICONS_BY_EXT[extension] || "/icons/documents.png";
+    return ICONS_BY_EXT[extension] || "/icons/unknow.png";
 }
 
 export const ExplorerApp = {
