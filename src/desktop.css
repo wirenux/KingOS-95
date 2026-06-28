@@ -38,6 +38,21 @@
   box-sizing: border-box;
 }
 
+.title-bar-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.title-bar-left {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.title-bar-text {
+  margin-left: 6px;
+}
+
 .taskbar-app-button {
   height: 24px;
   margin-left: 4px;

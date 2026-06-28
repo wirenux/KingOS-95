@@ -98,9 +98,13 @@ function spawnWindow(appConfig, parent) {
 
   windowEl.innerHTML = `
     <div class="title-bar">
-      <div class="title-bar-text">${appConfig.title}</div>
+      <div class="title-bar-left">
+        <img src="${appConfig.icon}" class="title-bar-icon"/>
+        <div class="title-bar-text">${appConfig.title}</div>
+      </div>
       <div class="title-bar-controls">
         <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
         <button aria-label="Close"></button>
       </div>
     </div>
