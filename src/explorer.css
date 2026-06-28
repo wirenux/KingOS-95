@@ -1,0 +1,72 @@
+.explorer-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 6px;
+}
+
+.option-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 2px 2px;
+}
+
+.option-bar-btn:first-letter {
+    text-decoration: underline;
+}
+
+.option-bar-btn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: #000;
+    cursor: pointer;
+    font-family: 'W95F', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0 10px 0 0;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.option-bar-btn:hover {
+    color: #000080;
+}
+
+.option-bar-btn:active,
+.option-bar-btn.is-active {
+    color: #ff0000;
+}
+
+.option-bar-btn:focus-visible {
+    outline: none;
+}
+
+.status-bar {
+    display: flex;
+    gap: 2px;
+    margin-top: auto;
+}
+
+.status-bar-field {
+    flex: 1 1 0;
+    margin: 0;
+    padding: 2px 6px;
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'W95F', sans-serif;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.status-bar-field:last-child {
+    flex-basis: 90px;
+    flex-grow: 0;
+}

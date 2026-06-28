@@ -1,3 +1,5 @@
+import "../explorer.css"
+
 export const ExplorerApp = {
     title: 'Exploring - My Computer',
     icon: '/icons/search.png',
@@ -5,9 +7,23 @@ export const ExplorerApp = {
     height: '320px',
 
     render() {
+        let nbOfFiles = 13;
+        let unitForSizeOfFile = "KB"
+        let sizeOfFile = `816 ${unitForSizeOfFile}`;
+
         return `
             <div class="explorer-app">
-                
+                <div class="option-bar">
+                    <button.default class="option-bar-btn" type="button">File</button.default>
+                    <button.default class="option-bar-btn" type="button">Edit</button.default>
+                    <button.default class="option-bar-btn" type="button">View</button.default>
+                    <button.default class="option-bar-btn" type="button">Tools</button.default>
+                    <button.default class="option-bar-btn" type="button">Help</button.default>
+                </div>
+                <div class="status-bar">
+                    <div class="status-bar-field">${nbOfFiles} object(s)</div>
+                    <div class="status-bar-field">${sizeOfFile}</div>
+                </div>
             </div>
         `;
     },
