@@ -8,6 +8,10 @@ const ICONS_BY_EXT = {
     txt: "/icons/documents.png"
 };
 
+function formatSizeKB(size) {
+    return `${size} KB`;
+}
+
 function getItemExtension(fileName) {
     const lastDotIndex = fileName.lastIndexOf(".");
     if (lastDotIndex <= 0 || lastDotIndex === fileName.length - 1) {
@@ -37,13 +41,14 @@ export const ExplorerApp = {
         const totalSizeKB = items
             .filter((item) => item.type === "file")
             .reduce((total, item) => total + (item.sizeKB || 0), 0);
-        const sizeOfFile = `${totalSizeKB} KB`;
+        const sizeOfFile = formatSizeKB(totalSizeKB);
 
         const itemsMarkup = items
             .map((item) => {
                 const icon = getItemIcon(item);
+                const itemSize = item.type === "file" ? item.sizeKB || 0 : 0;
                 return `
-                    <div class="explorer-content-item" data-type="${item.type}">
+                    <div class="explorer-content-item" data-type="${item.type}" data-name="${item.name}" data-size-kb="${itemSize}">
                         <img class="explorer-content-icon" src="${icon}" alt="${item.type}">
                         <span>${item.name}</span>
                     </div>
@@ -63,20 +68,55 @@ export const ExplorerApp = {
                     ${itemsMarkup}
                 </div>
                 <div class="status-bar">
-                    <div class="status-bar-field">${nbOfFiles} object(s)</div>
-                    <div class="status-bar-field">${sizeOfFile}</div>
+                    <div class="status-bar-field js-status-count">${nbOfFiles} object(s)</div>
+                    <div class="status-bar-field js-status-size">${sizeOfFile}</div>
                 </div>
             </div>
         `;
     },
 
     init(windowEl) {
-        const items = windowEl.querySelectorAll('.explorer-content-item');
+        const itemElements = Array.from(windowEl.querySelectorAll('.explorer-content-item'));
+        const explorerContent = windowEl.querySelector('.explorer-content');
+        const statusCount = windowEl.querySelector('.js-status-count');
+        const statusSize = windowEl.querySelector('.js-status-size');
 
-        items.forEach((item) => {
-            item.addEventListener('click', () => {
-                console.log(`Open ${item.textContent}`);
+        const totalObjects = itemElements.length;
+        const totalSizeKB = itemElements.reduce((total, item) => {
+            return total + (Number(item.dataset.sizeKb) || 0);
+        }, 0);
+
+        function resetStatus() {
+            statusCount.textContent = `${totalObjects} object(s)`;
+            statusSize.textContent = formatSizeKB(totalSizeKB);
+        }
+
+        function selectItem(item) {
+            itemElements.forEach((entry) => entry.classList.remove('is-selected'));
+            item.classList.add('is-selected');
+
+            const name = item.dataset.name || item.textContent.trim();
+            const type = item.dataset.type;
+            const sizeKB = Number(item.dataset.sizeKb) || 0;
+
+            statusCount.textContent = name;
+            statusSize.textContent = type === 'file' ? formatSizeKB(sizeKB) : 'File Folder';
+        }
+
+        itemElements.forEach((item) => {
+            item.addEventListener('click', (event) => {
+                event.stopPropagation();
+                selectItem(item);
             });
         });
+
+        explorerContent.addEventListener('click', (event) => {
+            if (event.target === explorerContent) {
+                itemElements.forEach((item) => item.classList.remove('is-selected'));
+                resetStatus();
+            }
+        });
+
+        resetStatus();
     }
 };
