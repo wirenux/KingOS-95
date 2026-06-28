@@ -1,3 +1,10 @@
+#desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 #workspace {
   position: absolute;
   left: 0;
@@ -14,6 +21,58 @@
   overflow: hidden;
   z-index: 10;
   box-sizing: border-box;
+}
+
+.app-window {
+  position: absolute;
+  min-width: 260px;
+  min-height: 180px;
+}
+
+.app-window.minimized {
+  display: none;
+}
+
+.app-window .window-body {
+  height: calc(100% - 38px);
+  box-sizing: border-box;
+}
+
+.taskbar-app-button {
+  height: 24px;
+  margin-left: 4px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+.taskbar-app-button.focused {
+  outline: 1px dotted #000;
+}
+
+.explorer-app {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.explorer-panel {
+  height: 100%;
+  padding: 6px;
+  overflow: auto;
+}
+
+.explorer-panel table {
+  width: 100%;
+}
+
+.explorer-panel td {
+  padding: 2px 0;
+}
+
+.explorer-item {
+  width: 100%;
+  text-align: left;
 }
 
 .desktop-shortcut {
