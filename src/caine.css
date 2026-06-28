@@ -1,0 +1,12 @@
+#terminal-container {
+    background-color: #000000;
+    border-top: 2px solid #1a1a1a;
+    border-left: 2px solid #1a1a1a;
+    border-bottom: 2px solid #FCFCFC;
+    border-right: 2px solid #FCFCFC;
+    color: #00ff00;
+    min-height: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+}

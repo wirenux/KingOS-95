@@ -1,5 +1,6 @@
 - [x] add border to start menu
 - [x] add gradient on the left of the start menu
+- [ ] make a white C&A logo and add it to the titlebar
 - [ ] make a general function to spaw + drag window (last) (for the login + desktop)
 - [ ] add favicon (last)
 - [ ] add crt effect (last)

@@ -62,7 +62,7 @@ function renderExplorerWindow(windowEl) {
 
     windowBody.innerHTML = ExplorerApp.render(windowEl);
     titleBarText.textContent = currentPath;
-    ExplorerApp.init(windowEl, currentPath);
+    ExplorerApp.init(windowEl, windowEl._appContext || {});
 }
 
 export const ExplorerApp = {
@@ -113,7 +113,9 @@ export const ExplorerApp = {
         `;
     },
 
-    init(windowEl) {
+    init(windowEl, context = {}) {
+        windowEl._appContext = context;
+
         if (!windowEl.dataset.explorerPath) {
             windowEl.dataset.explorerPath = ROOT_PATH;
         }
@@ -174,7 +176,7 @@ export const ExplorerApp = {
                 }
 
                 if (item.dataset.name === 'CAINE') {
-                    console.log("CAINE") // TODO: Change this to launch the caine app
+                    context.openApp?.('caine');
                 }
             });
         });

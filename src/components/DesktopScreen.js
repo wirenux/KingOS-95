@@ -3,9 +3,11 @@ import '../desktop.css'
 
 import { changeState } from '../main.js'
 import { ExplorerApp } from './ExplorerApp.js'
+import { CaineApp } from './CaineApp.js'
 
 const APP_REGISTRY = {
   explorer: ExplorerApp,
+  caine: CaineApp,
 };
 
 let clockInterval;
@@ -100,6 +102,17 @@ function spawnWindow(appConfig, parent) {
     windowEl.dataset.explorerPath = appConfig.startPath;
   }
 
+  const appContext = {
+    openApp: (appName) => {
+      const app = APP_REGISTRY[appName];
+      if (app) {
+        spawnWindow(app, parent);
+      }
+    }
+  };
+
+  windowEl._appContext = appContext;
+
   windowEl.innerHTML = `
     <div class="title-bar">
       <div class="title-bar-left">
@@ -177,7 +190,7 @@ function spawnWindow(appConfig, parent) {
   focusWindow();
 
   if (typeof appConfig.init === 'function') {
-    appConfig.init(windowEl);
+    appConfig.init(windowEl, appContext);
   }
 
   return windowEl;
