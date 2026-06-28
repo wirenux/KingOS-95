@@ -21,7 +21,33 @@ function updateClock() {
 export function renderDesktop(parent) {
     parent.innerHTML = `
         <div id="desktop">
-          <div id="workspace"></div>
+
+          <div id="workspace">
+            <div class="desktop-shortcut" data-app="computer">
+              <div class="shortcut-icon icon-computer"></div>
+              <div class="shortcut-label">My Computer</div>
+            </div>
+
+            <div class="desktop-shortcut" data-app="computer">
+              <div class="shortcut-icon icon-networkn"></div>
+              <div class="shortcut-label">Network Neighborhood</div>
+            </div>
+
+            <div class="desktop-shortcut" data-app="computer">
+              <div class="shortcut-icon icon-inbox"></div>
+              <div class="shortcut-label">Inbox</div>
+            </div>
+
+            <div class="desktop-shortcut" data-app="bin">
+              <div class="shortcut-icon icon-bin"></div>
+              <div class="shortcut-label">Recycle Bin</div>
+            </div>
+
+            <div class="desktop-shortcut" data-app="computer">
+              <div class="shortcut-icon icon-briefcase"></div>
+              <div class="shortcut-label">My Briefcase</div>
+            </div>
+          </div>
 
           <div id="taskbar">
             <button class="start-menu-btn">
