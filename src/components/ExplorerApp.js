@@ -17,7 +17,6 @@ export const ExplorerApp = {
                     <button.default class="option-bar-btn" type="button">File</button.default>
                     <button.default class="option-bar-btn" type="button">Edit</button.default>
                     <button.default class="option-bar-btn" type="button">View</button.default>
-                    <button.default class="option-bar-btn" type="button">Tools</button.default>
                     <button.default class="option-bar-btn" type="button">Help</button.default>
                 </div>
                 <div class="status-bar">
