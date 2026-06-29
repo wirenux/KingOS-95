@@ -3,7 +3,8 @@
 - [ ] make a white C&A logo and add it to the titlebar
 - [ ] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 - [ ] add the "Purge AI Program" window when pressed on enter at the end of the prompt
-- [ ] make a general function to spaw + drag window (last) (for the login + desktop)
+- [ ] being able to resize a window
+- [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [ ] add favicon (last)
 - [ ] add crt effect (last)
 - [ ] add animation (last)
