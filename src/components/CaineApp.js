@@ -184,6 +184,7 @@ export const CaineApp = {
 
             if (activeStepIndex >= SCRIPT_STEPS.length) {
                 terminalForm.style.display = 'none';
+                console.log("Purge AI Program"); // TODO: Launch Purge AI Program
             }
         }
 
