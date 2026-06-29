@@ -1,6 +1,6 @@
 import '../caine.css';
 
-const ROOT_PROMPT = '$kinger@circus:~$ ';
+const ROOT_PROMPT = 'kinger@circus:~$ ';
 
 const INITIAL_BANNER = [
     '# System: KingSolution 2.0. / Digital Circus Mainframe',
