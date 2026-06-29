@@ -7,6 +7,7 @@
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [x] add favicon (last)
+- [ ] reboot once the delete is finished
 - [ ] add crt effect (last)
 - [ ] add animation (last)
 - [ ] send mail to glitch to present my project
