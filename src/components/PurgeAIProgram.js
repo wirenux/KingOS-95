@@ -1,3 +1,18 @@
+function getScale() {
+    const workspace = document.getElementById('workspace');
+
+    if (!workspace) {
+        return 1;
+    }
+
+    const scale = Math.min(
+        workspace.clientWidth / 1920,
+        workspace.clientHeight / 1080
+    );
+
+    return Math.max(0.45, Math.min(scale, 1.5));
+}
+
 export const PurgeAIProgram = {
     title: "Purge AI Program",
     icon: "/icons/canda_white.svg",
@@ -19,8 +34,12 @@ export const PurgeAIProgram = {
 
     init(windowEl, appContext) {
         const workspace = document.getElementById('workspace');
-        windowEl._decorativeHeads = [];
 
+        if (!workspace) {
+            return;
+        }
+
+        windowEl._decorativeHeads = [];
         windowEl.style.overflow = 'visible';
 
         if (!document.getElementById('purge-animations')) {
@@ -64,7 +83,7 @@ export const PurgeAIProgram = {
                 src: '/images/Caine_Sprite.gif',
                 top: '50%',
                 left: '50%',
-                width: '380px',
+                baseWidth: 380,
                 transform: 'translate(-50%, -50%)',
                 isBubble: false
             },
@@ -72,7 +91,7 @@ export const PurgeAIProgram = {
                 src: '/images/Caine_Sprite.gif',
                 top: '0%',
                 right: '5%',
-                width: '260px',
+                baseWidth: 260,
                 transform: 'rotate(25deg)',
                 isBubble: false
             },
@@ -80,7 +99,7 @@ export const PurgeAIProgram = {
                 src: '/images/Caine_Sprite.gif',
                 bottom: '27%',
                 left: '10%',
-                width: '230px',
+                baseWidth: 230,
                 transform: 'rotate(-25deg)',
                 isBubble: false
             },
@@ -88,7 +107,7 @@ export const PurgeAIProgram = {
                 src: '/images/Bubble.png',
                 top: '-20px',
                 left: '100px',
-                width: '200px',
+                baseWidth: 200,
                 transform: 'rotate(-20deg)',
                 isBubble: true
             },
@@ -96,7 +115,7 @@ export const PurgeAIProgram = {
                 src: '/images/Bubble.png',
                 top: '50%',
                 right: '20px',
-                width: '170px',
+                baseWidth: 170,
                 transform: 'rotate(15deg)',
                 isBubble: true
             },
@@ -104,7 +123,7 @@ export const PurgeAIProgram = {
                 src: '/images/Bubble.png',
                 bottom: '-50px',
                 left: '-50px',
-                width: '300px',
+                baseWidth: 300,
                 transform: 'rotate(15deg)',
                 isBubble: true
             },
@@ -112,7 +131,7 @@ export const PurgeAIProgram = {
                 src: '/images/Caine_Sprite.gif',
                 bottom: '-400px',
                 left: '15%',
-                width: '280px',
+                baseWidth: 280,
                 transform: 'rotate(-5deg)',
                 isBubble: false
             },
@@ -120,7 +139,7 @@ export const PurgeAIProgram = {
                 src: '/images/Bubble.png',
                 bottom: '0px',
                 right: '25%',
-                width: '200px',
+                baseWidth: 200,
                 transform: 'rotate(10deg)',
                 isBubble: true
             },
@@ -128,7 +147,7 @@ export const PurgeAIProgram = {
                 src: '/images/Caine_Sprite.gif',
                 bottom: '50px',
                 right: '80px',
-                width: '220px',
+                baseWidth: 220,
                 transform: 'rotate(-30deg)',
                 isBubble: false
             }
@@ -141,7 +160,6 @@ export const PurgeAIProgram = {
             wrapper.style.zIndex = '9999';
             wrapper.style.pointerEvents = 'none';
 
-            if (head.width) wrapper.style.width = head.width;
             if (head.top) wrapper.style.top = head.top;
             if (head.bottom) wrapper.style.bottom = head.bottom;
             if (head.left) wrapper.style.left = head.left;
@@ -149,6 +167,7 @@ export const PurgeAIProgram = {
             if (head.transform) wrapper.style.transform = head.transform;
 
             const img = document.createElement('img');
+
             img.src = head.src;
             img.style.width = '100%';
             img.style.height = 'auto';
@@ -162,7 +181,24 @@ export const PurgeAIProgram = {
             wrapper.appendChild(img);
             workspace.appendChild(wrapper);
 
-            windowEl._decorativeHeads.push(wrapper);
+            windowEl._decorativeHeads.push({
+                wrapper,
+                baseWidth: head.baseWidth
+            });
         });
+
+        function updateSpriteSizes() {
+            const scale = getScale();
+
+            windowEl._decorativeHeads.forEach((head) => {
+                head.wrapper.style.width =
+                    `${head.baseWidth * scale}px`;
+            });
+        }
+
+        updateSpriteSizes();
+
+        windowEl._resizeHandler = updateSpriteSizes;
+        window.addEventListener('resize', updateSpriteSizes);
     }
 }
