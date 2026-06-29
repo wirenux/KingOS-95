@@ -95,7 +95,7 @@ function createTerminalRow({ prompt = '', text = '', kind = 'output' }) {
 
 export const CaineApp = {
     title: 'Cmd',
-    icon: '/icons/canda.png',
+    icon: '/icons/canda_white.svg',
     width: '615px',
     height: '505px',
 

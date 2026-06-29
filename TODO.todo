@@ -1,7 +1,7 @@
 - [x] add border to start menu
 - [x] add gradient on the left of the start menu
-- [ ] make a white C&A logo and add it to the titlebar
-- [ ] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
+- [x] make a white C&A logo and add it to the titlebar
+- [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 - [ ] add the "Purge AI Program" window when pressed on enter at the end of the prompt
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
