@@ -1,6 +1,5 @@
 export const PurgeAIProgram = {
     title: "Purge AI Program",
-
     icon: "/images/Caine_Sprite.gif",
     width: "500px",
     height: "100px",
@@ -16,30 +15,52 @@ export const PurgeAIProgram = {
     init(windowEl, appContext) {
         windowEl.style.overflow = 'visible';
 
+        if (!document.getElementById('purge-animations')) {
+            const style = document.createElement('style');
+            style.id = 'purges-animations';
+            style.innerHTML = `
+                @keyframes purgeShake {
+                    0% { transform: translate(0, 0) rotate(0deg); }
+                    25% { transform: translate(2px, -2px) rotate(2deg); }
+                    50% { transform: translate(-2px, 2px) rotate(-2deg); }
+                    75% { transform: translate(-2px, -2px) rotate(1deg); }
+                    100% { transform: translate(2px, 2px) rotate(-1deg); }
+                }
+                .shake-effect {
+                    animation: purgeShake 0.3s infinite alternate ease-in-out;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
         const decorativeHeads = [
             {
                 src: '/images/Caine_Sprite.gif',
-                top: '-345px',
-                left: '-425px',
-                width: '328px'
+                top: 'clamp(-345px, -30vw, -120px)',
+                left: 'clamp(-425px, -40vw, -150px)',
+                width: 'clamp(120px, 30vw, 328px)',
+                isBubble: false
             },
             {
                 src: '/images/Caine_Sprite.gif',
-                bottom: '-220px',
-                right: '-135px',
-                width: '232px'
+                bottom: 'clamp(-220px, -20vw, -100px)',
+                right: 'clamp(-135px, -15vw, -60px)',
+                width: 'clamp(100px, 20vw, 232px)',
+                isBubble: false
             },
             {
                 src: '/images/Bubble.png',
-                top: '-235px',
-                right: '220px',
-                width: '198px'
+                top: 'clamp(-235px, -25vw, -100px)',
+                right: 'clamp(100px, 20vw, 220px)',
+                width: 'clamp(80px, 18vw, 198px)',
+                isBubble: true
             },
             {
                 src: '/images/Bubble.png',
-                bottom: '-350px',
-                left: '-220px',
-                width: '202px'
+                bottom: 'clamp(-350px, -35vw, -120px)',
+                left: 'clamp(-220px, -25vw, -100px)',
+                width: 'clamp(80px, 18vw, 202px)',
+                isBubble: true
             }
         ];
 
@@ -49,16 +70,19 @@ export const PurgeAIProgram = {
             img.alt = "Decoration";
 
             img.style.position = 'absolute';
-            img.style.zIndex = '9999'; 
+            img.style.zIndex = '9999';
             img.style.pointerEvents = 'none';
-
-            img.style.imageRendering = 'pixelated'; 
+            img.style.imageRendering = 'pixelated';
 
             if (head.width) img.style.width = head.width;
             if (head.top) img.style.top = head.top;
             if (head.bottom) img.style.bottom = head.bottom;
             if (head.left) img.style.left = head.left;
             if (head.right) img.style.right = head.right;
+
+            if (head.isBubble) {
+                img.classList.add('shake-effect');
+            }
 
             windowEl.appendChild(img);
         });
