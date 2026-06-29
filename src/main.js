@@ -3,6 +3,16 @@ import "98.css";
 import { renderLoginScreen } from './components/LoginScreen'
 import { renderDesktop } from './components/DesktopScreen';
 
+window.addEventListener("load", () => {
+    const crt = document.querySelector(".container");
+    crt.classList.add("crt-off");
+
+    setTimeout(() => {
+      crt.classList.remove("crt-off");
+      crt.classList.add("crt-on");
+    }, 300);
+});
+
 export function makeDragable(windowEl, titlebarEl) {
   if (!windowEl || !titlebarEl) {
     return;

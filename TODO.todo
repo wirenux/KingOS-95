@@ -6,8 +6,10 @@
 - [x] add border to the Caine/cmd app
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
+- [ ] boot phase (copy & modify klassicos)
 - [x] add favicon (last)
 - [ ] reboot once the delete is finished
-- [ ] add crt effect (last)
-- [ ] add animation (last)
+- [x] add crt effect (last)
+- [ ] add animation b/w boot -> login -> desktop(last)
+- [ ] remove unuse node deps
 - [ ] send mail to glitch to present my project
