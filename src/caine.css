@@ -4,6 +4,11 @@
 }
 
 #terminal-container {
+    border-top: 2px solid #8c8c8c;
+    border-left: 2px solid #8c8c8c;
+    border-bottom: 2px solid #FCFCFC;
+    border-right: 2px solid #FCFCFC;
+    background-color: #FCFCFC;
     background-color: #000000;
     color: #fcfcfc;
 
