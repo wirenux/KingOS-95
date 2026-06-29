@@ -28,8 +28,24 @@ export const WindowManager = {
 
         topZIndex += 1;
         windowEl.style.zIndex = `${topZIndex}`;
-        windowEl.style.left = `${20 + workspace.querySelectorAll('.app-window').length * 24}px`;
-        windowEl.style.top = `${20 + workspace.querySelectorAll('.app-window').length * 24}px`;
+        if (appConfig.title === "Purge AI Program") {
+            const workspaceWidth = workspace.clientWidth;
+            const workspaceHeight = workspace.clientHeight;
+
+            const appWidth = parseInt(appConfig.width) || 500;
+            const appHeight = parseInt(appConfig.height) || 100;
+
+            const centerLeft = (workspaceWidth - appWidth) / 2;
+            const centerTop = (workspaceHeight - appHeight) / 2;
+
+            windowEl.style.position = 'absolute';
+            windowEl.style.left = `${Math.max(0, centerLeft)}px`;
+            windowEl.style.top = `${Math.max(0, centerTop)}px`;
+        } else {
+            windowEl.style.left = `${20 + workspace.querySelectorAll('.app-window').length * 24}px`;
+            windowEl.style.top = `${20 + workspace.querySelectorAll('.app-window').length * 24}px`;
+        }
+
         windowEl.style.width = appConfig.width || '420px';
         windowEl.style.height = appConfig.height || '320px';
 
