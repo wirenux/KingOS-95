@@ -29,6 +29,28 @@ export const PurgeAIProgram = {
                 .shake-effect {
                     animation: purgeShake 0.3s infinite alternate ease-in-out;
                 }
+
+                @media (max-width: 1200px) {
+                    .purge-head {
+                        transform: scale(0.6) !important;
+                    }
+                    /* Pull the offsets closer so they don't drift away when small */
+                    .head-0 { top: -200px !important; left: -250px !important; }
+                    .head-1 { bottom: -130px !important; right: -80px !important; }
+                    .head-2 { top: -140px !important; right: 130px !important; }
+                    .head-3 { bottom: -210px !important; left: -130px !important; }
+                }
+
+                /* Tablets / Mobile: Heavy panic downsizing down to 25% original size */
+                @media (max-width: 800px) {
+                    .purge-head {
+                        transform: scale(0.25) !important;
+                    }
+                    .head-0 { top: -100px !important; left: -120px !important; }
+                    .head-1 { bottom: -60px !important; right: -40px !important; }
+                    .head-2 { top: -70px !important; right: 60px !important; }
+                    .head-3 { bottom: -100px !important; left: -60px !important; }
+                }
             `;
             document.head.appendChild(style);
         }
@@ -36,30 +58,30 @@ export const PurgeAIProgram = {
         const decorativeHeads = [
             {
                 src: '/images/Caine_Sprite.gif',
-                top: 'clamp(-345px, -30vw, -120px)',
-                left: 'clamp(-425px, -40vw, -150px)',
-                width: 'clamp(120px, 30vw, 328px)',
+                top: '-345px',
+                left: '-425px',
+                width: '328px',
                 isBubble: false
             },
             {
                 src: '/images/Caine_Sprite.gif',
-                bottom: 'clamp(-220px, -20vw, -100px)',
-                right: 'clamp(-135px, -15vw, -60px)',
-                width: 'clamp(100px, 20vw, 232px)',
+                bottom: '-220px',
+                right: '-135px',
+                width: '232px',
                 isBubble: false
             },
             {
                 src: '/images/Bubble.png',
-                top: 'clamp(-235px, -25vw, -100px)',
-                right: 'clamp(100px, 20vw, 220px)',
-                width: 'clamp(80px, 18vw, 198px)',
+                top: '-235px',
+                right: '220px',
+                width: '198px',
                 isBubble: true
             },
             {
                 src: '/images/Bubble.png',
-                bottom: 'clamp(-350px, -35vw, -120px)',
-                left: 'clamp(-220px, -25vw, -100px)',
-                width: 'clamp(80px, 18vw, 202px)',
+                bottom: '-350px',
+                left: '-220px',
+                width: '202px',
                 isBubble: true
             }
         ];
