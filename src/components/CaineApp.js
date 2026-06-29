@@ -111,7 +111,7 @@ export const CaineApp = {
         `;
     },
 
-    init(windowEl) {
+    init(windowEl, appContext) {
         if (windowEl.dataset.terminalInitialized === 'true') {
             return;
         }
@@ -185,6 +185,10 @@ export const CaineApp = {
             if (activeStepIndex >= SCRIPT_STEPS.length) {
                 terminalForm.style.display = 'none';
                 console.log("Purge AI Program"); // TODO: Launch Purge AI Program
+
+                if (appContext && typeof appContext.openApp === 'function') {
+                    appContext.openApp('purge');
+                }
             }
         }
 

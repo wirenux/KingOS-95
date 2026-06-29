@@ -5,10 +5,12 @@ import { changeState } from '../main.js'
 import { ExplorerApp } from './ExplorerApp.js'
 import { CaineApp } from './CaineApp.js'
 import { WindowManager } from './WindowManager.js'
+import { PurgeAIProgram } from './PurgeAIProgram.js'
 
 const APP_REGISTRY = {
   explorer: ExplorerApp,
   caine: CaineApp,
+  purge: PurgeAIProgram,
 };
 
 let clockInterval;
