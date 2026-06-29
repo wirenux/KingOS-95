@@ -28,7 +28,7 @@ export const WindowManager = {
 
         topZIndex += 1;
         windowEl.style.zIndex = `${topZIndex}`;
-        if (appConfig.title === "Purge AI Program") {
+        if (appConfig.title === "Purge AI Program" || appConfig.title === "Cmd") {
             const workspaceWidth = workspace.clientWidth;
             const workspaceHeight = workspace.clientHeight;
 

@@ -18,6 +18,9 @@ export const PurgeAIProgram = {
     },
 
     init(windowEl, appContext) {
+        const workspace = document.getElementById('workspace');
+        windowEl._decorativeHeads = [];
+
         windowEl.style.overflow = 'visible';
 
         if (!document.getElementById('purge-animations')) {
@@ -52,28 +55,6 @@ export const PurgeAIProgram = {
                 .shake-effect {
                     animation: purgeShake 0.3s infinite alternate ease-in-out;
                 }
-
-                @media (max-width: 1200px) {
-                    .purge-head {
-                        transform: scale(0.6) !important;
-                    }
-                    /* Pull the offsets closer so they don't drift away when small */
-                    .head-0 { top: -200px !important; left: -250px !important; }
-                    .head-1 { bottom: -130px !important; right: -80px !important; }
-                    .head-2 { top: -140px !important; right: 130px !important; }
-                    .head-3 { bottom: -210px !important; left: -130px !important; }
-                }
-
-                /* Tablets / Mobile: Heavy panic downsizing down to 25% original size */
-                @media (max-width: 800px) {
-                    .purge-head {
-                        transform: scale(0.25) !important;
-                    }
-                    .head-0 { top: -100px !important; left: -120px !important; }
-                    .head-1 { bottom: -60px !important; right: -40px !important; }
-                    .head-2 { top: -70px !important; right: 60px !important; }
-                    .head-3 { bottom: -100px !important; left: -60px !important; }
-                }
             `;
             document.head.appendChild(style);
         }
@@ -81,55 +62,107 @@ export const PurgeAIProgram = {
         const decorativeHeads = [
             {
                 src: '/images/Caine_Sprite.gif',
-                top: '-345px',
-                left: '-425px',
-                width: '328px',
+                top: '50%',
+                left: '50%',
+                width: '380px',
+                transform: 'translate(-50%, -50%)',
                 isBubble: false
             },
             {
                 src: '/images/Caine_Sprite.gif',
-                bottom: '-220px',
-                right: '-135px',
-                width: '232px',
+                top: '0%',
+                right: '5%',
+                width: '260px',
+                transform: 'rotate(25deg)',
+                isBubble: false
+            },
+            {
+                src: '/images/Caine_Sprite.gif',
+                bottom: '27%',
+                left: '10%',
+                width: '230px',
+                transform: 'rotate(-25deg)',
                 isBubble: false
             },
             {
                 src: '/images/Bubble.png',
-                top: '-235px',
-                right: '220px',
-                width: '198px',
+                top: '-20px',
+                left: '100px',
+                width: '200px',
+                transform: 'rotate(-20deg)',
                 isBubble: true
             },
             {
                 src: '/images/Bubble.png',
-                bottom: '-350px',
-                left: '-220px',
-                width: '202px',
+                top: '50%',
+                right: '20px',
+                width: '170px',
+                transform: 'rotate(15deg)',
                 isBubble: true
+            },
+            {
+                src: '/images/Bubble.png',
+                bottom: '-50px',
+                left: '-50px',
+                width: '300px',
+                transform: 'rotate(15deg)',
+                isBubble: true
+            },
+            {
+                src: '/images/Caine_Sprite.gif',
+                bottom: '-400px',
+                left: '15%',
+                width: '280px',
+                transform: 'rotate(-5deg)',
+                isBubble: false
+            },
+            {
+                src: '/images/Bubble.png',
+                bottom: '0px',
+                right: '25%',
+                width: '200px',
+                transform: 'rotate(10deg)',
+                isBubble: true
+            },
+            {
+                src: '/images/Caine_Sprite.gif',
+                bottom: '50px',
+                right: '80px',
+                width: '220px',
+                transform: 'rotate(-30deg)',
+                isBubble: false
             }
         ];
 
-        decorativeHeads.forEach(head => {
+        decorativeHeads.forEach((head) => {
+            const wrapper = document.createElement('div');
+
+            wrapper.style.position = 'absolute';
+            wrapper.style.zIndex = '9999';
+            wrapper.style.pointerEvents = 'none';
+
+            if (head.width) wrapper.style.width = head.width;
+            if (head.top) wrapper.style.top = head.top;
+            if (head.bottom) wrapper.style.bottom = head.bottom;
+            if (head.left) wrapper.style.left = head.left;
+            if (head.right) wrapper.style.right = head.right;
+            if (head.transform) wrapper.style.transform = head.transform;
+
             const img = document.createElement('img');
             img.src = head.src;
-            img.alt = "Decoration";
-
-            img.style.position = 'absolute';
-            img.style.zIndex = '9999';
-            img.style.pointerEvents = 'none';
+            img.style.width = '100%';
+            img.style.height = 'auto';
+            img.style.display = 'block';
             img.style.imageRendering = 'pixelated';
-
-            if (head.width) img.style.width = head.width;
-            if (head.top) img.style.top = head.top;
-            if (head.bottom) img.style.bottom = head.bottom;
-            if (head.left) img.style.left = head.left;
-            if (head.right) img.style.right = head.right;
 
             if (head.isBubble) {
                 img.classList.add('shake-effect');
             }
 
-            windowEl.appendChild(img);
+            wrapper.appendChild(img);
+            workspace.appendChild(wrapper);
+
+            windowEl._decorativeHeads.push(wrapper);
         });
     }
 }
