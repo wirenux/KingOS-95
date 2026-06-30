@@ -9,9 +9,12 @@ export function renderBootScreen(parent) {
                 <div class="epa-text">EPA POLLUTION PREVENTER</div>
             </div>
             <div id="bios-content">
-                <!-- TODO: Add blue human logo -->
+                <img id="bios-man" src="/images/BIOS_Logo.png"/>
+                <div id="bios-text"></div>
             </div>
+
             <span class="bios-cursor"></span>
+
             <div id="bios-bottom">
                 <span>Press <strong>DEL</strong> to enter SETUP</span>
                 <span>12/10/96-i430VX,UMC8669-2A59GH2BC-00</span>
@@ -22,7 +25,7 @@ export function renderBootScreen(parent) {
     async function runBiosBoot() {
         await new Promise(res => setTimeout(res, 2300)); // wait for the crt effect to be stable
 
-        const container = parent.querySelector('#bios-content');
+        const container = parent.querySelector('#bios-text');
         const biosScreen = parent.querySelector('#bios-screen');
 
         const lines = [
@@ -42,9 +45,16 @@ export function renderBootScreen(parent) {
             { text: "&nbsp;&nbsp;Detecting IDE Secondary Salve ... None", delay: 1000 }
         ];
 
-        for (const line of lines) {
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+
             const div = document.createElement('div');
             div.innerHTML = line.text;
+
+            if (i === 3) {
+                div.style.clear = 'left';
+            }
+
             container.appendChild(div);
 
             if (line.isRam) {

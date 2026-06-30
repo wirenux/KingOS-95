@@ -8,8 +8,9 @@
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [ ] boot phase (copy & modify klassicos)
--   [ ] add the little blue man
+-   [x] add the little blue man
 -   [x] add delay before text show up
+-   [ ] fix the flashbang on chrome/safari at crt startup
 - [x] add favicon (last)
 - [x] add crt effect (last)
 - [ ] add animation b/w boot -> login -> desktop(last)
