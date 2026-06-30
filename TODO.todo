@@ -5,7 +5,7 @@
 -   [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 -   [x] reboot once the delete is finished
 - [x] add border to the Caine/cmd app
-- [ ] being able to resize a window
+- [?] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [x] boot phase (copy & modify klassicos)
 -   [x] add the little blue man
@@ -15,8 +15,14 @@
 -   [x] add startup sound
 - [x] add favicon (last)
 - [x] add crt effect (last)
-- [ ] add animation
+- [x] add animation
 -   [x] b/w boot -> login
--   [ ] login -> desktop
+-   [?] login -> desktop
+- [ ] when press Power off (start menu) -> reboot
 - [ ] remove unuse node deps
+- [ ] make a README.md
+- [ ] add every Stardance Devlogs in the README
+- [ ] take picture for Stardance banner (the one with caine + bubble)
+- [ ] upload it to Vercel
+- [ ] Ship it !
 - [ ] send mail to glitch to present my project
