@@ -1,7 +1,6 @@
 import '../style.css'
 import '../desktop.css'
 
-import { changeState } from '../main.js'
 import { ExplorerApp } from './ExplorerApp.js'
 import { CaineApp } from './CaineApp.js'
 import { WindowManager } from './WindowManager.js'
@@ -30,7 +29,7 @@ function updateClock() {
   clock.textContent = time;
 }
 
-export function renderDesktop(parent) {
+export function renderDesktop(parent, changeState) {
 
   WindowManager.init(APP_REGISTRY, parent);
 

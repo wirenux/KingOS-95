@@ -1,9 +1,7 @@
 import '../style.css'
 import '../login.css'
 
-import { changeState } from '../main.js'
-
-export function renderLoginScreen(parent) {
+export function renderLoginScreen(parent, changeState) {
     parent.innerHTML = `
         <div class="window loginWindow" style="width: 380px;">
             <div class="title-bar">
@@ -39,7 +37,7 @@ export function renderLoginScreen(parent) {
             </form>
         </div>
     `
-    const loginForm = document.getElementById('login-form');
+    const loginForm = parent.querySelector('#login-form');
 
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();

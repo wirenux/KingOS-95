@@ -78,57 +78,53 @@ const AppState = {
   DESKTOP: 'DESKTOP'
 }
 
-let currentState = AppState.BOOT; // TODO: change to boot later
+let currentState = AppState.BOOT;
 
 export function changeState(newState) {
-  currentState = newState;
-  const appContainer = document.querySelector("#app");
-  const crtContainer = document.querySelector(".container");
+  currentState = newState
 
-  appContainer.innerHTML = ''; // clear page
+  const appContainer = document.querySelector("#app")
+  const biosRoot = document.getElementById('bios-root')
+  const crtContainer = document.querySelector(".container")
+
+  appContainer.innerHTML = ''
+  if (biosRoot) {
+    biosRoot.innerHTML = ''
+  }
 
   if (crtContainer) {
-    if (currentState === AppState.BOOT) {
-      crtContainer.classList.remove("os-active");
-    } else {
-      crtContainer.classList.add("os-active");
-    }
+    crtContainer.classList.toggle("os-active", currentState !== AppState.BOOT)
   }
 
   switch (currentState) {
     case AppState.BOOT:
-      renderBootScreen(document.getElementById('bios-root')).then(() => {
-          // changeState(AppState.LOGIN);
-      });
-      break; // TODO: add renderBootScreen
+      renderBootScreen(document.getElementById('bios-root'), changeState);
+      break
 
     case AppState.LOGIN:
-      renderLoginScreen(appContainer);
+      renderLoginScreen(appContainer, changeState);
 
-      const loginWindow = document.querySelector('.loginWindow');
-      const titleBar = document.querySelector('.title-bar');
+      const loginWindow = document.querySelector('.loginWindow')
+      const titleBar = document.querySelector('.title-bar')
 
       if (loginWindow && titleBar) {
         requestAnimationFrame(() => {
-          const scale = 1.25;
+          const scale = 1.25
 
-          const winWidth = loginWindow.offsetWidth;
-          const winHeight = loginWindow.offsetHeight;
+          const centerX = ((window.innerWidth / scale) - loginWindow.offsetWidth) / 2
+          const centerY = ((window.innerHeight / scale) - loginWindow.offsetHeight) / 2
 
-          const centerX = ((window.innerWidth / scale) - winWidth) / 2;
-          const centerY = ((window.innerHeight / scale) - winHeight) / 2;
+          loginWindow.style.left = `${centerX}px`
+          loginWindow.style.top = `${centerY}px`
 
-          loginWindow.style.left = `${centerX}px`;
-          loginWindow.style.top = `${centerY}px`;
-
-          makeDragable(loginWindow, titleBar);
-        });
+          makeDragable(loginWindow, titleBar)
+        })
       }
-      break;
+      break
 
     case AppState.DESKTOP:
-      renderDesktop(appContainer);
-      break;
+      renderDesktop(appContainer, changeState);
+      break
   }
 }
 

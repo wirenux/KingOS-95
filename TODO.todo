@@ -11,6 +11,8 @@
 -   [x] add the little blue man
 -   [x] add delay before text show up
 -   [x] fix the flashbang on chrome/safari at crt startup
+-   [x] fix changeState b/w boot->login
+-   [ ] add startup sound
 - [x] add favicon (last)
 - [x] add crt effect (last)
 - [ ] add animation b/w boot -> login -> desktop(last)
