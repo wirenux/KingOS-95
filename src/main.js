@@ -2,8 +2,9 @@ import './style.css'
 import "98.css";
 import { renderLoginScreen } from './components/LoginScreen'
 import { renderDesktop } from './components/DesktopScreen';
+import { renderBootScreen } from './components/BootScreen';
 
-window.addEventListener("load", () => {
+window.addEventListener("load", () => { // enable crt
     const crt = document.querySelector(".container");
     crt.classList.add("crt-off");
 
@@ -77,17 +78,30 @@ const AppState = {
   DESKTOP: 'DESKTOP'
 }
 
-let currentState = AppState.DESKTOP; // TODO: change to boot later
+let currentState = AppState.BOOT; // TODO: change to boot later
 
 export function changeState(newState) {
   currentState = newState;
   const appContainer = document.querySelector("#app");
+  const crtContainer = document.querySelector(".container");
 
   appContainer.innerHTML = ''; // clear page
 
+  if (crtContainer) {
+    if (currentState === AppState.BOOT) {
+      crtContainer.classList.remove("os-active");
+    } else {
+      crtContainer.classList.add("os-active");
+    }
+  }
+
   switch (currentState) {
     case AppState.BOOT:
+      renderBootScreen(document.getElementById('bios-root')).then(() => {
+          // changeState(AppState.LOGIN);
+      });
       break; // TODO: add renderBootScreen
+
     case AppState.LOGIN:
       renderLoginScreen(appContainer);
 
@@ -111,6 +125,7 @@ export function changeState(newState) {
         });
       }
       break;
+
     case AppState.DESKTOP:
       renderDesktop(appContainer);
       break; // TODO: add renderDesktop

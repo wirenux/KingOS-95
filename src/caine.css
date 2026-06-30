@@ -1,6 +1,6 @@
 @font-face {
     font-family: ModernDOS;
-    src: url(/public/fonts/ModernDOS9x14.ttf);
+    src: url(/fonts/ModernDOS9x14.ttf);
 }
 
 #terminal-container {
