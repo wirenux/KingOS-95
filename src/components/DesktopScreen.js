@@ -31,6 +31,12 @@ function updateClock() {
 
 export function renderDesktop(parent, changeState) {
 
+  const bootSound = new Audio('/sounds/Windows_95.mp3');
+
+  bootSound.play().catch(error => {
+    console.log("Boot sound Error :", error);
+  });
+
   WindowManager.init(APP_REGISTRY, parent);
 
   parent.innerHTML = `
