@@ -84,19 +84,19 @@ export function renderBootScreen(parent, changeState) {
 
     async function showWin95Boot() {
         parent.innerHTML = `
-            <div id="win95-boot-screen" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: black;">
+            <div id="win95-boot-screen" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: black; transition: opacity 500ms ease-out; opacity: 1;">
                 <img src="${win95Boot}" />
             </div>
         `
-
-        await new Promise(r => setTimeout(r, 300))
+        await wait(2000)
 
         const stillBoot = document.getElementById('win95-boot-screen')
         if (!stillBoot) {
-            console.log('test');
             return;
         }
 
+        stillBoot.style.opacity = '0'
+        await wait(500)
         changeState('LOGIN')
     }
 
