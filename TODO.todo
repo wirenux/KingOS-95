@@ -1,15 +1,16 @@
 - [x] add border to start menu
 - [x] add gradient on the left of the start menu
 - [x] make a white C&A logo and add it to the titlebar
-- [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 - [x] add the "Purge AI Program" window when pressed on enter at the end of the prompt
+-   [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
+-   [ ] reboot once the delete is finished
 - [x] add border to the Caine/cmd app
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [ ] boot phase (copy & modify klassicos)
-- [ ] add delay before text show up
+-   [ ] add the little blue man
+-   [x] add delay before text show up
 - [x] add favicon (last)
-- [ ] reboot once the delete is finished
 - [x] add crt effect (last)
 - [ ] add animation b/w boot -> login -> desktop(last)
 - [ ] remove unuse node deps

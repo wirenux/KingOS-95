@@ -128,10 +128,10 @@ export function changeState(newState) {
 
     case AppState.DESKTOP:
       renderDesktop(appContainer);
-      break; // TODO: add renderDesktop
+      break;
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  changeState(currentState) // TODO: change to AppState.BOOT
+  changeState(currentState);
 })
