@@ -71,6 +71,18 @@ $os-background: #008689;
     3px 100%;
 }
 
+@keyframes crt-fade {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes flicker {
   0%   { opacity: 0.10; }
   10%  { opacity: 0.35; }
@@ -109,13 +121,13 @@ $os-background: #008689;
 
   11% {
     transform: scale(1, 1);
-    filter: contrast(0) brightness(0);
+    // filter: contrast(0) brightness(0);
     opacity: 0;
   }
 
   100% {
     transform: scale(1, 1);
-    filter: contrast(1) brightness(1.2) saturate(1.3);
+    // filter: contrast(1) brightness(1.2) saturate(1.3);
     opacity: 1;
   }
 }
