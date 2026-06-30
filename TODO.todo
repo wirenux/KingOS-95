@@ -7,7 +7,7 @@
 - [x] add border to the Caine/cmd app
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
-- [ ] boot phase (copy & modify klassicos)
+- [x] boot phase (copy & modify klassicos)
 -   [x] add the little blue man
 -   [x] add delay before text show up
 -   [x] fix the flashbang on chrome/safari at crt startup
