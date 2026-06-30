@@ -190,7 +190,6 @@ export function renderDesktop(parent, changeState) {
     item.addEventListener('click', (e) => {
       const action = e.currentTarget.getAttribute('data-action');
       if (action === 'logoff') {
-        // TODO: add an animation
         changeState('LOGIN');
       } else {
         const appConfig = APP_REGISTRY[action];
@@ -198,8 +197,6 @@ export function renderDesktop(parent, changeState) {
         if (appConfig) {
           WindowManager.spawnWindow(appConfig);
         }
-
-        console.log(`Clicked on: ${action}`);
       }
     });
   });

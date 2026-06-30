@@ -1,3 +1,5 @@
+import { changeState } from "../main.js";
+
 function getScale() {
     const workspace = document.getElementById('workspace');
 
@@ -200,5 +202,16 @@ export const PurgeAIProgram = {
 
         windowEl._resizeHandler = updateSpriteSizes;
         window.addEventListener('resize', updateSpriteSizes);
+
+        const progressBar = windowEl.querySelector('.progress-indicator-bar');
+
+        if (progressBar) {
+            progressBar.addEventListener('animationend', () => {
+                setTimeout(() => {
+                    window.removeEventListener('resize', windowEl._resizeHandler);
+                    changeState('BOOT');
+                }, 700);
+            })
+        }
     }
 }

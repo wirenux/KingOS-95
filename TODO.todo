@@ -3,7 +3,7 @@
 - [x] make a white C&A logo and add it to the titlebar
 - [x] add the "Purge AI Program" window when pressed on enter at the end of the prompt
 -   [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
--   [ ] reboot once the delete is finished
+-   [x] reboot once the delete is finished
 - [x] add border to the Caine/cmd app
 - [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
