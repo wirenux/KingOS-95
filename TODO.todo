@@ -15,6 +15,8 @@
 -   [x] add startup sound
 - [x] add favicon (last)
 - [x] add crt effect (last)
-- [ ] add animation b/w boot -> login -> desktop(last)
+- [ ] add animation
+-   [x] b/w boot -> login
+-   [ ] login -> desktop
 - [ ] remove unuse node deps
 - [ ] send mail to glitch to present my project
