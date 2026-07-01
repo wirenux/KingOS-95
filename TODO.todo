@@ -36,7 +36,7 @@
 - [x] plug Settings button to stardance.hackclub.com
 
 - [x] maybe speed up bios animation
-- [ ] remove use of password manager in LoginScreen
+- [-] remove use of password manager in LoginScreen (not able with Bitwarden)
 
 - [ ] remove unuse node deps
 - [ ] make a README.md
