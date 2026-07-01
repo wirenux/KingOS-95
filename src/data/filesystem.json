@@ -37,6 +37,12 @@
         { "name": "AI", "type": "folder" },
         { "name": "CA_NeuralScans (Obsolete)", "type": "folder" }
     ],
+    "C:\\CANDA\\Recycle Bin": [
+      { "name": "Project_Exit_DO_NOT_OPEN", "type": "folder" },
+      { "name": "Kaufmo.exe", "type": "file" },
+      { "name": "Pomni_Sanity.conf", "type": "file" },
+      { "name": "Gangle_Comedy_Mask.dll", "type": "file" }
+    ],
     "C:\\CANDA\\Characters\\AI": [
         { "name": "???", "type": "file"},
         { "name": "CAINE", "type": "file"}

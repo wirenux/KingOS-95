@@ -11,7 +11,9 @@ const ICONS_BY_EXT = {
     bmp: "/icons/bitmap.png",
     pwl: "/icons/canda.png",
     xlb: "/icons/text_file.png",
-    grp: "/icons/group.png"
+    grp: "/icons/group.png",
+    dll: "/icons/dll.png",
+    conf: "/icons/cfgFile.png"
 };
 
 function formatSizeKB(size) {

@@ -20,6 +20,9 @@
 -   [?] login -> desktop
 - [x] when press Power off (start menu) -> reboot
 - [ ] every desktop icon do somethings
+- [ ] add a error window
+-   [ ] to use when dbclick on Pomni_Sanity.conf -> "Error: File corrupted or not found"
+-   [ ] to use when dbclick on Gangle_Comedy_Mask.dll -> "Error: Broken into pieces"
 - [ ] remove unuse node deps
 - [ ] make a README.md
 - [ ] add every Stardance Devlogs in the README

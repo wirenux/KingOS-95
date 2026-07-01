@@ -10,6 +10,12 @@ const APP_REGISTRY = {
   explorer: ExplorerApp,
   caine: CaineApp,
   purge: PurgeAIProgram,
+  bin: {
+    ...ExplorerApp,
+    title: 'Recycle Bin',
+    icon: '/icons/bin.png',
+    startPath: 'C:\\CANDA\\Recycle Bin'
+  },
 };
 
 let clockInterval;
