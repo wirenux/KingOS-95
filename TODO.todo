@@ -17,13 +17,13 @@
 - [x] add crt effect (last)
 - [x] add animation
 -   [x] b/w boot -> login
--   [?] login -> desktop
+-   [ ] login -> desktop
 - [x] when press Power off (start menu) -> reboot
 - [ ] every desktop icon do somethings
 -   [x] Recycle Bin
 -   [x] My Briefcase
--   [ ] Inbox
--     [ ] Implement Netscape from KlassicOS (if need time)
+-   [x] Inbox
+-     [x] Implement Netscape from KlassicOS (if need time)
 -   [x] Network Neighborhood
 -     [x] Put error message with "No connection"
 - [x] add a error window
@@ -35,7 +35,7 @@
 - [ ] plug Programs button button to github repo
 - [ ] plug Settings button to stardance.hackclub.com
 
-- [] maybe speed up bios animation
+- [ ] maybe speed up bios animation
 
 - [ ] remove unuse node deps
 - [ ] make a README.md
