@@ -34,7 +34,7 @@
 - [x] plug Document button to github profile
 - [x] plug Programs button button to github repo
 - [x] plug Settings button to stardance.hackclub.com
-- [ ] fix spacing in bios animation
+- [x] fix spacing in bios animation
 - [ ] make the login window use the window manager
 - [ ] add right-click on desktop
 

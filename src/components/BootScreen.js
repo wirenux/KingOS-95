@@ -45,8 +45,8 @@ export function renderBootScreen(parent, changeState) {
             { text: "&nbsp;", delay: 100 },
             { text: "Award Plug and Play BIOS Extension v1.0A", delay: 600 },
             { text: "Copyright (C) 1996, Award Software, Inc.", delay: 600 },
-            { text: "&nbsp;&nbsp;Detecting IDE Primary Master ... PCemHD", delay: 500 },
-            { text: "&nbsp;&nbsp;Detecting IDE Primary Slave ... PCemCD", delay: 500 },
+            { text: "&nbsp;&nbsp;Detecting IDE Primary Master &nbsp... PCemHD", delay: 500 },
+            { text: "&nbsp;&nbsp;Detecting IDE Primary Slave &nbsp ... PCemCD", delay: 500 },
             { text: "&nbsp;&nbsp;Detecting IDE Secondary Master... None", delay: 500 },
             { text: "&nbsp;&nbsp;Detecting IDE Secondary Slave ... None", delay: 500 }
         ]
