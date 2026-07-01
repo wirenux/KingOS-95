@@ -18,7 +18,8 @@
 - [x] add animation
 -   [x] b/w boot -> login
 -   [?] login -> desktop
-- [ ] when press Power off (start menu) -> reboot
+- [x] when press Power off (start menu) -> reboot
+- [ ] every desktop icon do somethings
 - [ ] remove unuse node deps
 - [ ] make a README.md
 - [ ] add every Stardance Devlogs in the README

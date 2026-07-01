@@ -191,6 +191,8 @@ export function renderDesktop(parent, changeState) {
       const action = e.currentTarget.getAttribute('data-action');
       if (action === 'logoff') {
         changeState('LOGIN');
+      } else if (action === 'shutdown'){
+        changeState('BOOT');
       } else {
         const appConfig = APP_REGISTRY[action];
 

@@ -272,6 +272,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  font-family: 'W95F';
   padding: 2px 0;
 }
 
