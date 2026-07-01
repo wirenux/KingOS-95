@@ -5,7 +5,7 @@
 -   [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 -   [x] reboot once the delete is finished
 - [x] add border to the Caine/cmd app
-- [ ] being able to resize a window
+- [x] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [x] boot phase (copy & modify klassicos)
 -   [x] add the little blue man
@@ -34,6 +34,8 @@
 - [x] plug Document button to github profile
 - [x] plug Programs button button to github repo
 - [x] plug Settings button to stardance.hackclub.com
+- [ ] fix spacing in bios animation
+- [ ] make the login window use the window manager
 
 - [x] maybe speed up bios animation
 - [-] remove use of password manager in LoginScreen (not able with Bitwarden)

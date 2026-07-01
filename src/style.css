@@ -36,3 +36,72 @@ input, textarea {
   user-select: text;
   -webkit-user-select: text;
 }
+
+.win-resize-handle {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 16px;
+  height: 16px;
+
+  cursor: se-resize;
+  z-index: 9999;
+}
+
+.win-resize-handle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: rotate(180deg);
+  transform-origin: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 7px,
+      #fff 7px,
+      #fff 8px,
+      transparent 8px,
+      transparent 11px,
+      #fff 11px,
+      #fff 12px,
+      transparent 12px
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 8px,
+      #000 8px,
+      #000 9px,
+      transparent 9px,
+      transparent 12px,
+      #000 12px,
+      #000 13px,
+      transparent 13px
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 3px,
+      #fff 3px,
+      #fff 4px,
+      transparent 4px,
+      transparent 7px,
+      #fff 7px,
+      #fff 8px,
+      transparent 8px
+    ),
+    linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 4px,
+      #000 4px,
+      #000 5px,
+      transparent 5px,
+      transparent 8px,
+      #000 8px,
+      #000 9px,
+      transparent 9px
+    );
+}

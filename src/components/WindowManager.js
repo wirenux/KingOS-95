@@ -104,6 +104,7 @@ export const WindowManager = {
             <div class="window-body">
                 ${appConfig.render(windowEl, appConfig)}
             </div>
+            <div class="win-resize-handle"></div>
         `
 
         const taskButton = document.createElement('button');
@@ -160,6 +161,42 @@ export const WindowManager = {
         closeButton.addEventListener('click', (event) => {
             event.stopPropagation();
             closeWindow();
+        });
+
+        const resizeHandle = windowEl.querySelector('.win-resize-handle');
+        resizeHandle.addEventListener('mousedown', (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+
+            if (windowEl.classList.contains('maximized')) {
+                return;
+            }
+
+            const startX = e.clientX;
+            const startY = e.clientY;
+
+            const startWidth = windowEl.offsetWidth;
+            const startHeight = windowEl.offsetHeight;
+
+            function onMouseMove(moveEvent) {
+                const scale = 1.25;
+                const deltaX = (moveEvent.clientX - startX) / scale;
+                const deltaY = (moveEvent.clientY - startY) / scale;
+
+                const newWidth = Math.max(250, startWidth + deltaX);
+                const newHeight = Math.max(150, startHeight + deltaY);
+
+                windowEl.style.width = `${newWidth}px`;
+                windowEl.style.height = `${newHeight}px`;
+            }
+
+            function onMouseUp() {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            }
+
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
         });
 
         this._makeWindowDraggable(windowEl, titleBar);
