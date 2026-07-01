@@ -53,11 +53,36 @@ export const WindowManager = {
             windowEl.dataset.explorerPath = appConfig.startPath;
         }
 
+        if (appConfig.centered || appConfig.title === "Purge AI Program" || appConfig.title === "Cmd" || appConfig.title === "Error") {
+            const workspaceWidth = workspace.clientWidth;
+            const workspaceHeight = workspace.clientHeight;
+            const appWidth = parseInt(appConfig.width) || 500;
+            const appHeight = parseInt(appConfig.height) || 100;
+
+            const centerLeft = (workspaceWidth - appWidth) / 2;
+            const centerTop = (workspaceHeight - appHeight) / 2;
+
+            windowEl.style.position = 'absolute';
+            windowEl.style.left = `${Math.max(0, centerLeft)}px`;
+            windowEl.style.top = `${Math.max(0, centerTop)}px`;
+        }
+
         const appContext = {
             openApp: (appName) => {
                 const app = this.registry[appName];
                 if (app) {
                     this.spawnWindow(app);
+                }
+            },
+            openError: (message) => {
+                const errorApp = this.registry.error;
+
+                if (errorApp) {
+                    this.spawnWindow({
+                        ...errorApp,
+                        message: message || errorApp.message,
+                        centered: true
+                    });
                 }
             }
         }
@@ -77,7 +102,7 @@ export const WindowManager = {
                 </div>
             </div>
             <div class="window-body">
-                ${appConfig.render(windowEl)}
+                ${appConfig.render(windowEl, appConfig)}
             </div>
         `
 

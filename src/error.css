@@ -1,0 +1,40 @@
+.error-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.error-main-row {
+    display: flex;
+    align-items: center;
+    gap: 14px
+}
+
+.error-image img{
+    display: block;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.error-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 14px;
+    word-break: break-word;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.error-ok-btn {
+    min-width: 75px;
+    height: 23px;
+    font-size: 11px;
+}

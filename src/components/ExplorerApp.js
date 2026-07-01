@@ -177,6 +177,18 @@ export const ExplorerApp = {
                     openFolder(item);
                 }
 
+                if (item.dataset.name === 'Pomni_Sanity.conf') {
+                    context.openError?.('Error: File corrupted or not found');
+                }
+
+                if (item.dataset.name === 'Gangle_Comedy_Mask.dll') {
+                    context.openError?.('Error: Broken into pieces');
+                }
+
+                if (item.dataset.name === 'Kaufmo.exe') {
+                    context.openError?.('Error: File not found. Have you Tried to search in the Cellar ?');
+                }
+
                 if (item.dataset.name === 'CAINE') {
                     context.openApp?.('caine');
                 }

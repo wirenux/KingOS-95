@@ -3,6 +3,7 @@ import '../desktop.css'
 
 import { ExplorerApp } from './ExplorerApp.js'
 import { CaineApp } from './CaineApp.js'
+import { ErrorWindow } from './ErrorWindow.js'
 import { WindowManager } from './WindowManager.js'
 import { PurgeAIProgram } from './PurgeAIProgram.js'
 
@@ -10,6 +11,7 @@ const APP_REGISTRY = {
   explorer: ExplorerApp,
   caine: CaineApp,
   purge: PurgeAIProgram,
+  error: ErrorWindow,
   bin: {
     ...ExplorerApp,
     title: 'Recycle Bin',
