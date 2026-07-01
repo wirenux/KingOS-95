@@ -3,6 +3,7 @@ import '../netscape.css'
 export const BrowserApp = {
     title: 'Netscape Navigator',
     contentBgColor: '#C8C8C8',
+    icon: '/icons/Netscape_icon.svg',
     width: '1000px',
     height: '700px',
 
@@ -49,12 +50,12 @@ export const BrowserApp = {
             </div>
 
             <div id="address-btn-bar">
-                <button.default class="address-btn">What's New ?</button.default>
-                <button.default class="address-btn">What's Cool ?</button.default>
-                <button.default class="address-btn">Destination</button.default>
-                <button.default class="address-btn">Net Search</button.default>
-                <button.default class="address-btn">People</button.default>
-                <button.default class="address-btn">Software</button.default>
+                <button class="address-btn">What's New ?</button>
+                <button class="address-btn">What's Cool ?</button>
+                <button class="address-btn">Destination</button>
+                <button class="address-btn">Net Search</button>
+                <button class="address-btn">People</button>
+                <button class="address-btn">Software</button>
             </div>
 
             <div class="browser-viewport">

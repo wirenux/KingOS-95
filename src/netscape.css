@@ -168,11 +168,6 @@ hr {
     outline: none;
     padding: 0;
 
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-bottom: 2px solid #FCFCFC;
-    border-right: 2px solid #FCFCFC;
-
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' shape-rendering='crispEdges'><polygon points='4,6 12,6 8,10' fill='black'/></svg>");
     background-size: contain;
     background-repeat: no-repeat;
@@ -199,25 +194,9 @@ hr {
     -moz-osx-font-smoothing: grayscale;
     font-smooth: never;
     font-size: 14px;
-    color: black;
 
-    background-color: #C8C8C8;
     padding: 2px 8px;
     cursor: pointer;
-
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-bottom: 2px solid #FCFCFC;
-    border-right: 2px solid #FCFCFC;
-    outline: none;
-}
-
-.address-btn:active {
-    border-top: 2px solid #000;
-    border-left: 2px solid #000;
-    border-bottom: 2px solid #FCFCFC;
-    border-right: 2px solid #FCFCFC;
-    padding: 3px 7px 1px 9px;
 }
 
 .toolbar-wrapper {
