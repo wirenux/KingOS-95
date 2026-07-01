@@ -205,17 +205,29 @@ export function renderDesktop(parent, changeState) {
         WindowManager.spawnWindow(selectedApp);
       }
     });
-  }
+  };
+
+  const externalLinks = {
+    programs: 'https://github.com/wirenux/KingOS-95',
+    favorites: 'https://stardance.hackclub.com/projects/23455',
+    documents: 'https://github.com/wirenux',
+    settings: 'https://stardance.hackclub.com'
+  };
 
   // Start menu item
   const menuItems = parent.querySelectorAll('.start-menu-item');
   menuItems.forEach(item => {
     item.addEventListener('click', (e) => {
       const action = e.currentTarget.getAttribute('data-action');
+
+      startMenu.classList.remove('show');
+
       if (action === 'logoff') {
         changeState('LOGIN');
       } else if (action === 'shutdown'){
         changeState('BOOT');
+      } else if (externalLinks[action]) {
+        window.open(externalLinks[action], '_blank', 'noopener,noreferrer');
       } else {
         const appConfig = APP_REGISTRY[action];
 

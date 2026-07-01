@@ -5,7 +5,7 @@
 -   [x] draw caine and bubble (on aseprite), add caine and bubble when deleting CAINE
 -   [x] reboot once the delete is finished
 - [x] add border to the Caine/cmd app
-- [?] being able to resize a window
+- [ ] being able to resize a window
 - [x] make a general function to spaw + drag window (last) (for the login + desktop)
 - [x] boot phase (copy & modify klassicos)
 -   [x] add the little blue man
@@ -19,7 +19,7 @@
 -   [x] b/w boot -> login
 -   [ ] login -> desktop
 - [x] when press Power off (start menu) -> reboot
-- [ ] every desktop icon do somethings
+- [x] every desktop icon do somethings
 -   [x] Recycle Bin
 -   [x] My Briefcase
 -   [x] Inbox
@@ -30,10 +30,10 @@
 -   [x] to use when dbclick on Pomni_Sanity.conf -> "Error: File corrupted or not found"
 -   [x] to use when dbclick on Gangle_Comedy_Mask.dll -> "Error: Broken into pieces"
 -   [x] to use when dbclick on Kaufmo.exe -> "Error: File not found. Have you Tried to search in the Cellar ?"
-- [ ] plug Favorites button from Start Menu to open the stardance project link
-- [ ] plug Document button to github profile
-- [ ] plug Programs button button to github repo
-- [ ] plug Settings button to stardance.hackclub.com
+- [x] plug Favorites button from Start Menu to open the stardance project link
+- [x] plug Document button to github profile
+- [x] plug Programs button button to github repo
+- [x] plug Settings button to stardance.hackclub.com
 
 - [ ] maybe speed up bios animation
 
