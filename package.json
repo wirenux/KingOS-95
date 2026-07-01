@@ -13,9 +13,6 @@
     "vite": "^8.0.12"
   },
   "dependencies": {
-    "98.css": "^0.1.21",
-    "compass-mixins": "^0.12.12",
-    "pixi-filters": "^6.1.5",
-    "pixi.js": "^8.19.0"
+    "98.css": "^0.1.21"
   }
 }

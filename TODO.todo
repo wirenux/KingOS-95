@@ -38,7 +38,7 @@
 - [x] maybe speed up bios animation
 - [-] remove use of password manager in LoginScreen (not able with Bitwarden)
 
-- [ ] remove unuse node deps
+- [x] remove unuse node deps
 - [ ] make a README.md
 - [ ] add every Stardance Devlogs in the README
 - [ ] make a rule to contribute e.g.: add new file to the filesystem.json
