@@ -16,7 +16,7 @@ export function renderLoginScreen(parent, changeState) {
                 <div class="login-main">
 
                     <div class="login-instruction">
-                        <img src="/icons/key.png" class="keyIcon" alt="Windows Security Key" />
+                        <img src="/icons/keyLog.png" class="keyIcon" alt="Windows Security Key" />
                         <p class="instruction-text">Type a user name and password to log on to Windows.</p>
                     </div>
 
