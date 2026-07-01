@@ -6,6 +6,7 @@ import { CaineApp } from './CaineApp.js'
 import { ErrorWindow } from './ErrorWindow.js'
 import { WindowManager } from './WindowManager.js'
 import { PurgeAIProgram } from './PurgeAIProgram.js'
+import { BrowserApp } from './NetscapeApp.js'
 
 const APP_REGISTRY = {
   explorer: ExplorerApp,
@@ -30,7 +31,8 @@ const APP_REGISTRY = {
     icon: '/icons/networkn.png',
     message: 'Error: No connection. Please connect to the C&A Server',
     centered: true,
-  }
+  },
+  inbox: BrowserApp
 };
 
 let clockInterval;
