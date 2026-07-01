@@ -16,8 +16,21 @@ const APP_REGISTRY = {
     ...ExplorerApp,
     title: 'Recycle Bin',
     icon: '/icons/bin.png',
-    startPath: 'C:\\CANDA\\Recycle Bin'
+    startPath: 'C:\\Recycle Bin'
   },
+  briefcase: {
+    ...ExplorerApp,
+    title: 'My Briefcase',
+    icon: '/icons/briefcase.png',
+    startPath: 'C:\\My Briefcase'
+  },
+  networkn: {
+    ...ErrorWindow,
+    title: 'Error',
+    icon: '/icons/networkn.png',
+    message: 'Error: No connection. Please connect to the C&A Server',
+    centered: true,
+  }
 };
 
 let clockInterval;

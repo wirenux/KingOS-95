@@ -13,7 +13,9 @@ const ICONS_BY_EXT = {
     xlb: "/icons/text_file.png",
     grp: "/icons/group.png",
     dll: "/icons/dll.png",
-    conf: "/icons/cfgFile.png"
+    conf: "/icons/cfgFile.png",
+    key: "/icons/key.png",
+    doc: "/icons/doc.png"
 };
 
 function formatSizeKB(size) {
@@ -187,6 +189,18 @@ export const ExplorerApp = {
 
                 if (item.dataset.name === 'Kaufmo.exe') {
                     context.openError?.('Error: File not found. Have you Tried to search in the Cellar ?');
+                }
+
+                if (item.dataset.name === 'System_Override.key') {
+                    context.openError?.('Error: All keys have been given');
+                }
+
+                if (item.dataset.name === 'Headset_Prototype_V0.4.txt') {
+                    context.openError?.('Error: File corrupted or not found');
+                }
+
+                if (item.dataset.name === 'Employee_Exit_Interviews.doc') {
+                    context.openError?.('Error: No more existing Employee');
                 }
 
                 if (item.dataset.name === 'CAINE') {

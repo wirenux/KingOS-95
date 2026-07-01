@@ -20,14 +20,30 @@
 -   [?] login -> desktop
 - [x] when press Power off (start menu) -> reboot
 - [ ] every desktop icon do somethings
+-   [x] Recycle Bin
+-   [x] My Briefcase
+-   [ ] Inbox
+-     [ ] Implement Netscape from KlassicOS (if need time)
+-   [x] Network Neighborhood
+-     [x] Put error message with "No connection"
 - [x] add a error window
 -   [x] to use when dbclick on Pomni_Sanity.conf -> "Error: File corrupted or not found"
 -   [x] to use when dbclick on Gangle_Comedy_Mask.dll -> "Error: Broken into pieces"
 -   [x] to use when dbclick on Kaufmo.exe -> "Error: File not found. Have you Tried to search in the Cellar ?"
+- [ ] plug Favorites button from Start Menu to open the stardance project link
+- [ ] plug Document button to github profile
+- [ ] plug Programs button button to github repo
+- [ ] plug Settings button to stardance.hackclub.com
+
+- [] maybe speed up bios animation
+
 - [ ] remove unuse node deps
 - [ ] make a README.md
 - [ ] add every Stardance Devlogs in the README
+- [ ] make a rule to contribute e.g.: add new file to the filesystem.json
 - [ ] take picture for Stardance banner (the one with caine + bubble)
 - [ ] upload it to Vercel
 - [ ] Ship it !
 - [ ] send mail to glitch to present my project
+
+- [ ] Minesweeper ?
