@@ -184,7 +184,7 @@ export const WindowManager = {
                 const deltaY = (moveEvent.clientY - startY) / scale;
 
                 const newWidth = Math.max(250, startWidth + deltaX);
-                const newHeight = Math.max(150, startHeight + deltaY);
+                const newHeight = Math.max(110, startHeight + deltaY);
 
                 windowEl.style.width = `${newWidth}px`;
                 windowEl.style.height = `${newHeight}px`;
