@@ -36,6 +36,7 @@
 - [x] plug Settings button to stardance.hackclub.com
 - [ ] fix spacing in bios animation
 - [ ] make the login window use the window manager
+- [ ] add right-click on desktop
 
 - [x] maybe speed up bios animation
 - [-] remove use of password manager in LoginScreen (not able with Bitwarden)
