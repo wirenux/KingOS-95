@@ -15,7 +15,7 @@
 
 ## What is KingOS 95?
 
-An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](TODO:_add_link_here) and by [Windows 95](TODO:_add_wiki_link_here) and [98](TODO:_add_wiki_link_here). See a demo [here](TODO:add_link), fully in your browser.
+An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo [here](TODO:add_link), fully in your browser.
 
 > [!NOTE]
 > **Stuck on the Login Screen?**
@@ -66,11 +66,7 @@ This project was built to be lightweight, fast, and free of heavy frontend frame
 
 ## Stardance Devlogs ᕙ(  •̀ ᗜ •́  )ᕗ
 
-On [Stardance](TODO:_add_link_here) you can watch the full development process via all the devlogs i've created:
-
-* **[Devlog #1: TODO:_add_title](TODO:_link_here)**
-* **[Devlog #2: TODO:_add_title](TODO:_link_here)**
-* **[Devlog #3: TODO:_add_title](TODO:_link_here)**
+On [Stardance](https://stardance.hackclub.com/) you can watch the full development process via all the devlogs i've created here : [KingOS 95 Devlogs](https://stardance.hackclub.com/projects/23455)
 
 ## How to contribute ?
 
@@ -95,7 +91,7 @@ If you are adding a new file, folder, or application that the user can open via 
 ## Development
 
 > [!IMPORTANT]
-> You must have [Node](TODO:_add_link_here), [NPM](TODO:_add_link_here) or [PNPM](TODO:_add_link_here) downloaded on your computer
+> You must have [Node](https://nodejs.org/), [NPM](https://www.npmjs.com/) or [PNPM](https://pnpm.io/) downloaded on your computer
 
 ### Dependencies
 
@@ -107,7 +103,7 @@ If you are adding a new file, folder, or application that the user can open via 
 
 #### Building
 
-* Clone the repository with 
+* Clone the repository with
 ```bash
 git clone https://github.com/wirenux/KingOS-95
 cd KingOS-95
@@ -132,7 +128,7 @@ KingOS 95 should be running at `localhost:5173`
 
 ### Credits
 
-This project is created by [@wirenux](https://github.com/wirenux) and use [98.css](TODO:_add_link_here).
+This project is created by [@wirenux](https://github.com/wirenux) and use [98.css](https://jdan.github.io/98.css) and modified code from [CSS CRT screen effect](https://codepen.io/lbebber/pen/XJRdrV).
 
 ### License
 

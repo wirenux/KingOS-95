@@ -43,11 +43,12 @@
 
 - [x] remove unuse node deps
 - [x] ask for skeleton of README (not text just categories)
-- [ ] make a README.md
-- [ ] add every Stardance Devlogs in the README
+- [x] make a README.md
+- [x] add every Stardance Devlogs in the README
 - [x] make a rule to contribute e.g.: add new file to the filesystem.json
 - [x] say what i've used
 - [ ] take picture for Stardance banner (the one with caine + bubble)
+- [ ] add browser.md
 - [ ] upload it to Vercel
 - [ ] Ship it !
 - [ ] send mail to glitch to present my project + youtuber
