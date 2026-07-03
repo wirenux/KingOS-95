@@ -47,8 +47,8 @@
 - [x] add every Stardance Devlogs in the README
 - [x] make a rule to contribute e.g.: add new file to the filesystem.json
 - [x] say what i've used
-- [ ] take picture for Stardance banner (the one with caine + bubble)
-- [ ] add browser.md
+- [x] take picture for Stardance banner (the one with caine + bubble)
+- [x] add browser.md
 - [ ] upload it to Vercel
 - [ ] Ship it !
 - [ ] send mail to glitch to present my project + youtuber

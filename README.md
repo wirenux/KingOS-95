@@ -15,7 +15,7 @@
 
 ## What is KingOS 95?
 
-An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo [here](TODO:add_link), fully in your browser.
+An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo [here](TODO:_add_link_here), fully in your browser.
 
 > [!NOTE]
 > **Stuck on the Login Screen?**
@@ -24,7 +24,7 @@ An entirely local browser-based **Operating System** (**OS**) that is inspired b
 > * **Password:** `quennie123`
 
 > [!WARNING]
-> KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](TODO:_make_a_document).
+> KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](BrowserQuirks.md).
 
 <table align="center">
   <tr>
