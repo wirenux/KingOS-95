@@ -15,7 +15,7 @@
 
 ## What is KingOS 95?
 
-An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo [here](TODO:_add_link_here), fully in your browser.
+An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo here : [KingOs 95 - Vercel](https://kingos-95.vercel.app/), fully in your browser.
 
 > [!NOTE]
 > **Stuck on the Login Screen?**
