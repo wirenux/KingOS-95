@@ -48,7 +48,7 @@ An entirely local browser-based **Operating System** (**OS**) that is inspired b
 
 * **Custom Vector Window Manager:** A lightweight window manager supporting `zIndex` layering, minimizing, maximizing, draging and resizing window
 * **Virtual JSON Filesystem Mapping:** Dynamic folder and document structure using only a JSON file
-* ** CRT Shader:** Scanline and aesthetic from retro display. Overlays optimized for web performance
+* **CRT Shader:** Scanline and aesthetic from retro display. Overlays optimized for web performance
 * **Smart Start Menu System:** Handles internal application spawns, external link, and direct OS state toggles (Log Off / Shut Down).
 * **Bespoke Digital Circus Ecosystem Applications:**
   * **CaineApp:** The classic Cmd used in the show !
