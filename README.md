@@ -23,6 +23,12 @@ An entirely local browser-based **Operating System** (**OS**) that is inspired b
 > * **User name:** `kinger`
 > * **Password:** `quennie123`
 
+> [!NOTE]
+> If you want the Classic Secnario from the Show you can do:
+> My Computer/Characters/AI/CAINE
+> Then press a bunch of random key (or spam enter)
+> You'll get the animation !
+
 > [!WARNING]
 > KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](BrowserQuirks.md).
 
