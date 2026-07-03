@@ -126,6 +126,10 @@ KingOS 95 should be running at `localhost:5173`
 
 ## Boring Stuff
 
+### Use of AI
+
+* Brainstorming + README.md idea
+
 ### Credits
 
 This project is created by [@wirenux](https://github.com/wirenux) and use [98.css](https://jdan.github.io/98.css) and modified code from [CSS CRT screen effect](https://codepen.io/lbebber/pen/XJRdrV).
