@@ -1,4 +1,4 @@
-TODO: Main Image HERE
+<img src="assets/logo.png" />
 
 <p align="center">
     <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=flat&logo=html5&logoColor=white">
@@ -9,18 +9,52 @@ TODO: Main Image HERE
     <img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat">
 </p>
 
-TODO: Brief "Slogan"
+> The C&A certified 32-bit workstation built for trapped souls ⎛⎝( ` ᢍ ´ )⎠⎞ᵐᵘʰᵃʰᵃ
 
 ---
 
 ## What is KingOS 95?
 
-An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](TODO:_add_link_here) and by [Windows 95](TODO:_add_wiki_link_here) and [98]((TODO:_add_wiki_link_here)). See a demo [here](TODO:add_link), fully in your browser.
+An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](TODO:_add_link_here) and by [Windows 95](TODO:_add_wiki_link_here) and [98](TODO:_add_wiki_link_here). See a demo [here](TODO:add_link), fully in your browser.
+
+> [!NOTE]
+> **Stuck on the Login Screen?**
+> To enter the workstation, use the authentic credentials from the show:
+> * **User name:** `kinger`
+> * **Password:** `quennie123`
 
 > [!WARNING]
 > KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](TODO:_make_a_document).
 
-TODO: Add image here
+<table align="center">
+  <tr>
+    <td align="center"><img src="assets/desktop.png" width="512px"/><br><sub><b>Desktop</b></sub></td>
+    <td align="center"><img src="assets/boot.png" width="570px"/><br><sub><b>Bios Startup</b></sub></td>
+    <td align="center"><img src="assets/login.png" width="512px"/><br><sub><b>Login</b></sub></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+      <table border="0">
+        <tr>
+          <td align="center"><img src="assets/winBoot.png" width="512px"/><br><sub><b>Windows Boot screen</b></sub></td>
+          <td style="width: 20px;"></td> <td align="center"><img src="assets/main.png" width="512px"/><br><sub><b>Purge AI Error</b></sub></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+## Core feature
+
+* **Custom Vector Window Manager:** A lightweight window manager supporting `zIndex` layering, minimizing, maximizing, draging and resizing window
+* **Virtual JSON Filesystem Mapping:** Dynamic folder and document structure using only a JSON file
+* **Authentic CRT Video Shader:** Scanline and aesthetic from retro display. Overlays optimized for web performance
+* **Smart Start Menu System:** Handles internal application spawns, external link, and direct OS state toggles (Log Off / Shut Down).
+* **Bespoke Digital Circus Ecosystem Applications:**
+  * **CaineApp:** The classic Cmd used in the show !
+  * **PurgeAIProgram:** The app with the progress bar when Caine is being deleted
+  * **Netscape Inbox & Network Neighborhood**
+  * **My Briefcase & Recycle Bin**
 
 ## Built with...
 
