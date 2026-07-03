@@ -42,11 +42,11 @@
 - [-] remove use of password manager in LoginScreen (not able with Bitwarden)
 
 - [x] remove unuse node deps
-- [ ] ask for skeleton of README (not text just categories)
+- [x] ask for skeleton of README (not text just categories)
 - [ ] make a README.md
 - [ ] add every Stardance Devlogs in the README
-- [ ] make a rule to contribute e.g.: add new file to the filesystem.json
-- [ ] say what i've used
+- [x] make a rule to contribute e.g.: add new file to the filesystem.json
+- [x] say what i've used
 - [ ] take picture for Stardance banner (the one with caine + bubble)
 - [ ] upload it to Vercel
 - [ ] Ship it !

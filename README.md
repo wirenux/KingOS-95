@@ -1,5 +1,105 @@
-# KingOS 95
+TODO: Main Image HERE
 
-TODO: ADD BADGE HERE
+<p align="center">
+    <img src="https://img.shields.io/badge/HTML-%23E34F26.svg?style=flat&logo=html5&logoColor=white">
+    <img src="https://img.shields.io/badge/CSS-%231572B6.svg?style=flat&logo=css&logoColor=white">
+    <img src="https://img.shields.io/badge/Javascript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black">
+    <img src="https://img.shields.io/badge/Vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white">
+    <img src="https://img.shields.io/badge/98.css-%23008080.svg?style=flat">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg?style=flat">
+</p>
 
-This project is a web-based **Operating System** (**OS**) that is inspiered by the computer in [The Amazing Digitial Circus](TODO:_add_link_here) and by [Windows 95](TODO:_add_wiki_link_here) and [98]((TODO:_add_wiki_link_here)) in general
+TODO: Brief "Slogan"
+
+---
+
+## What is KingOS 95?
+
+An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](TODO:_add_link_here) and by [Windows 95](TODO:_add_wiki_link_here) and [98]((TODO:_add_wiki_link_here)). See a demo [here](TODO:add_link), fully in your browser.
+
+> [!WARNING]
+> KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](TODO:_make_a_document).
+
+TODO: Add image here
+
+## Built with...
+
+This project was built to be lightweight, fast, and free of heavy frontend frameworks. Here is what I used:
+
+* **Vanilla HTML, CSS, and JavaScript:** for the whole app ! `ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧`
+* **[Vite](https://vitejs.dev/):** for local development and production bundling
+* **[98.css](https://jdan.github.io/98.css/):** for the pixel-perfect retro UI components (like the windows, buttons, etc...)
+
+## Stardance Devlogs ᕙ(  •̀ ᗜ •́  )ᕗ
+
+On [Stardance](TODO:_add_link_here) you can watch the full development process via all the devlogs i've created:
+
+* **[Devlog #1: TODO:_add_title](TODO:_link_here)**
+* **[Devlog #2: TODO:_add_title](TODO:_link_here)**
+* **[Devlog #3: TODO:_add_title](TODO:_link_here)**
+
+## How to contribute ?
+
+Contribution, bug reports and Easter Egg ideas are welcome `(˶ᵔᗜᵔ˶)ﾉﾞ` !
+
+### The Virtual Filesystem
+
+If you are adding a new file, folder, or application that the user can open via the **File Explorer**, **you must register it in the filesystem JSON**.
+
+1. Create your file/app logic in the `src/` folder
+2. Open `src/data/filesystem.json`
+3. Add your file exactly like this :
+
+```json
+"C:\\ParentDirectory": [
+    { "name": "YourFileName.yourextension", "type": "(e.g: file or folder)" }
+],
+```
+
+4. Test it locally before submitting a Pull Request
+
+## Development
+
+> [!IMPORTANT]
+> You must have [Node](TODO:_add_link_here), [NPM](TODO:_add_link_here) or [PNPM](TODO:_add_link_here) downloaded on your computer
+
+### Dependencies
+
+* `vite`
+* Node.js
+* PNPM (or NPM)
+* `sass-embedded`
+* `98.css`
+
+#### Building
+
+* Clone the repository with 
+```bash
+git clone https://github.com/wirenux/KingOS-95
+cd KingOS-95
+```
+* Then install the dependencies with:
+```bash
+pnpm install
+# or npm install
+```
+
+### Running KingOS 95 Locally
+
+You can run KingOS 95 with the command:
+
+```bash
+pnpm dev
+```
+
+KingOS 95 should be running at `localhost:5173`
+
+## Boring Stuff
+
+### Credits
+
+This project is created by [@wirenux](https://github.com/wirenux) and use [98.css](TODO:_add_link_here).
+
+### License
+
+This project use the [MIT License](./LICENSE)
