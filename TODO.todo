@@ -17,7 +17,7 @@
 - [x] add crt effect (last)
 - [x] add animation
 -   [x] b/w boot -> login
--   [ ] login -> desktop
+-   [-] login -> desktop (don't need it like the real windows 95)
 - [x] when press Power off (start menu) -> reboot
 - [x] every desktop icon do somethings
 -   [x] Recycle Bin
@@ -39,7 +39,7 @@
 - [-] add right-click on desktop
 
 - [x] maybe speed up bios animation
-- [-] remove use of password manager in LoginScreen (not able with Bitwarden)
+- [-] remove use of password manager in LoginScreen (not able with Bitwarden and with Safari integrated one)
 
 - [x] remove unuse node deps
 - [x] ask for skeleton of README (not text just categories)
@@ -50,7 +50,7 @@
 - [x] take picture for Stardance banner (the one with caine + bubble)
 - [x] add browser.md
 - [x] upload it to Vercel
-- [ ] Ship it !
-- [ ] send mail to glitch to present my project + youtuber
+- [x] Ship it !
+- [x] send mail to glitch to present my project + youtuber
 
 - [ ] Minesweeper ?
