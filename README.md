@@ -21,7 +21,7 @@ An entirely local browser-based **Operating System** (**OS**) that is inspired b
 > **Stuck on the Login Screen?**
 > To enter the workstation, use the authentic credentials from the show:
 > * **User name:** `kinger`
-> * **Password:** `quennie123`
+> * **Password:** `queenie123`
 
 > [!NOTE]
 > If you want the Classic Secnario from the Show you can do:

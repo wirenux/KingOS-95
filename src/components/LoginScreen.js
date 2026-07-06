@@ -45,7 +45,7 @@ export function renderLoginScreen(parent, changeState) {
         const username = loginForm.username.value;
         const password = loginForm.password.value;
 
-        if (username === 'kinger' && password === "quennie123") {
+        if (username === 'kinger' && password === "queenie123") {
             changeState('DESKTOP');
         }
     })
