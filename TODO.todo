@@ -53,7 +53,14 @@
 - [x] Ship it !
 - [x] send mail to glitch to present my project + youtuber
 
-- [ ] add a window with a password + username on login screen
+- [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on
+- [ ] add a ? button on the right side of the password input
+
+- [ ] make every folder / file do somethings
+- [ ] for file with no action -> Error: No implemented yet
+- [ ] add clippy
+-   [ ] make clippy say : If you want the original things do : blablabla
 
 - [ ] Minesweeper ?
+- [ ] clippy give hints/advice for minesweeper
