@@ -53,14 +53,23 @@
 - [x] Ship it !
 - [x] send mail to glitch to present my project + youtuber
 
+- [ ] add warning for epilepsy
+- [ ] add a settings app like the control panel
+-   [ ] add on/off switch on crt effect
+- [ ] make it clear that we can remove the CRT effect (via clippy)
+
 - [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on
 - [ ] add a ? button on the right side of the password input
 
+- [ ] add go back in explorer under File>Go back
 - [ ] make every folder / file do somethings
 - [ ] for file with no action -> Error: No implemented yet
 - [ ] add clippy
 -   [ ] make clippy say : If you want the original things do : blablabla
+
+- [ ] add AMI like BIOS
+-   [ ] work with keyboard + mouse
 
 - [ ] Minesweeper ?
 - [ ] clippy give hints/advice for minesweeper
