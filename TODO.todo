@@ -76,7 +76,7 @@
 
 - [ ] fix every scroll bar
 
-- [ ] add >! WARNING (in red) for epilespy
+- [x] add >! WARNING (in red) for epilespy
 
 - [ ] Minesweeper ?
 - [ ] clippy give hints/advice for minesweeper
