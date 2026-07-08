@@ -53,17 +53,17 @@
 - [x] Ship it !
 - [x] send mail to glitch to present my project + youtuber
 
-- [ ] add warning for epilepsy
+- [x] add warning for epilepsy in the README
 - [x] add a settings app like the control panel
--   [ ] add on/off switch on crt effect
+-   [x] add on/off switch on crt effect
 -   [x] draw the CRT screen
--   [ ] make the change actually change the background
-- [ ] make it clear that we can remove the CRT effect (via clippy)
+-   [x] make the change actually change the background
+- [ ] make it clear that we can remove the CRT effect (via clippy + markdown)
 - [ ] make a .md file for all settings we can change (crt etc...)
 
 - [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on
-- [ ] add a ? button on the right side of the password input
+- ?[ ]? add a ? button on the right side of the password input
 
 - [ ] add go back in explorer under File>Go back
 - [ ] make every folder / file do somethings

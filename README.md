@@ -13,24 +13,20 @@
 
 ---
 
+> [!CAUTION]
+> **Photosensitivity/Epilepsy Warning**
+> This project features retro CRT screen shaders, flashing animations, and fast-moving visual effects (such as the CAINE animation sequence). If you have a history of epilepsy or photosensitivity, please exercise caution when interacting with the live demo.
+
 ## What is KingOS 95?
 
 An entirely local browser-based **Operating System** (**OS**) that is inspired by the computer in [The Amazing Digitial Circus](https://www.glitchprod.com/digital-circus) and by [Windows 95](https://en.wikipedia.org/wiki/Windows_95) and [98](https://en.wikipedia.org/wiki/Windows_98). See a demo here : [KingOS 95 - Vercel](https://kingos-95.vercel.app/), fully in your browser.
 
 > [!NOTE]
-> **Stuck on the Login Screen?**
-> To enter the workstation, use the authentic credentials from the show:
-> * **User name:** `kinger`
-> * **Password:** `queenie123`
-
-> [!NOTE]
-> If you want the Classic Secnario from the Show you can do:
-> My Computer/Characters/AI/CAINE
-> Then press a bunch of random key (or spam enter)
-> You'll get the animation !
-
-> [!WARNING]
-> KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](BrowserQuirks.md).
+> **Useful Info:**
+> * **Login Credentials:**
+> * * Username: `kinger`
+> * * Password: `queenie123`
+> * **Classic Scenario :** Go to `My Computer` -> `Characters` -> `AI` -> `CAINE`, then spam your keys or `Enter` to trigger the animation loop!
 
 <table align="center">
   <tr>
@@ -131,6 +127,15 @@ pnpm dev
 KingOS 95 should be running at `localhost:5173`
 
 ## Boring Stuff
+
+### Other
+
+<details>
+<summary>🌐 <b>Browser Compatibility & Quirks</b> (Click to expand)</summary>
+
+> [!WARNING]
+> KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](BrowserQuirks.md).
+</details>
 
 ### Use of AI
 
