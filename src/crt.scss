@@ -7,7 +7,6 @@ body.container {
   background: $screen-background;
   position: relative;
   overflow: hidden;
-  border: 2px solid #666;
 
   &.os-active {
     background: $os-background;
