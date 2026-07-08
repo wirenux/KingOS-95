@@ -7,24 +7,11 @@
 #workspace {
 	background-repeat: repeat;
 	background-position: top left;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
 	image-rendering: pixelated;
-}
-
-#workspace[data-wallpaper="black-thatch"] {
-	background-size: 62px 60px;
-}
-
-#workspace[data-wallpaper="bubble"] {
-	background-size: 128px 128px;
-}
-
-#workspace[data-wallpaper="blue-rivets"],
-#workspace[data-wallpaper="triangle"] {
-	background-size: 32px 32px;
-}
-
-#workspace[data-wallpaper="waves"] {
-	background-size: 64px 64px;
 }
 
 .display-content .window-body {
