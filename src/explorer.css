@@ -123,3 +123,10 @@
     flex-basis: 110px;
     flex-grow: 0;
 }
+
+.explorer-content::-webkit-scrollbar-button:start:increment,
+.explorer-content::-webkit-scrollbar-button:end:decrement {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}

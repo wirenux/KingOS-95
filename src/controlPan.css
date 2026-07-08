@@ -1,0 +1,116 @@
+.controlPan-app {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.option-bar {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 0;
+	padding: 2px 2px;
+}
+
+.option-bar-btn:first-letter {
+	text-decoration: underline;
+}
+
+.option-bar-btn {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	color: #000;
+	cursor: pointer;
+	font-family: 'W95F', sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	margin: 0 10px 0 0;
+	min-height: 0;
+	padding: 0;
+	text-align: left;
+	appearance: none;
+	-webkit-appearance: none;
+}
+
+.option-bar-btn:hover {
+	color: #000080;
+}
+
+.option-bar-btn:active,
+.option-bar-btn.is-active {
+	color: #ff0000;
+}
+
+.option-bar-btn:focus-visible {
+	outline: none;
+}
+
+.controlPan-container {
+	z-index: 10;
+	width: 100%;
+	height: auto;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #f0f0f0;
+	border-right: 2px solid #f0f0f0;
+	background-color: #FCFCFC;
+	flex: 1 1 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 74px);
+	grid-auto-rows: 78px;
+	gap: 10px 8px;
+	padding: 8px 10px;
+	align-content: start;
+	justify-content: start;
+	overflow: auto;
+	box-sizing: border-box;
+	min-height: 0;
+	flex: 1 1 auto;
+}
+
+.controlPan-shortcut {
+	width: 76px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+}
+
+.controlPan-shortcut.is-selected .controlPan-label {
+	background-color: #000080;
+	color: #ffffff;
+	outline: 1px dotted #ffffff;
+}
+
+.controlPan-icon {
+	width: 42px;
+	height: 42px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 4px;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+.controlPan-label {
+	font-family: 'W95F', sans-serif;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: grayscale;
+	font-smooth: never;
+	font-size: 12px;
+	color: #000;
+	text-align: center;
+	padding: 2px 4px;
+	word-break: break-word;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.icon-display {
+	background-image: url("/icons/display.png");
+}

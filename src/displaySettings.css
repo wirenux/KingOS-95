@@ -1,0 +1,179 @@
+.display-content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#workspace {
+	background-repeat: repeat;
+	background-position: top left;
+	image-rendering: pixelated;
+}
+
+#workspace[data-wallpaper="black-thatch"] {
+	background-size: 62px 60px;
+}
+
+#workspace[data-wallpaper="blue-rivets"],
+#workspace[data-wallpaper="triangle"] {
+	background-size: 32px 32px;
+}
+
+#workspace[data-wallpaper="waves"] {
+	background-size: 64px 64px;
+}
+
+.display-content .window-body {
+	flex: 1 1 auto;
+}
+
+.display-settings-panels {
+	display: flex;
+	gap: 0.75rem;
+	align-items: stretch;
+	justify-content: space-between;
+	margin-top: 0.75rem;
+}
+
+.display-settings-panels fieldset {
+	flex: 1 1 0;
+	min-width: 0;
+	min-height: 150px;
+	display: flex;
+	flex-direction: column;
+}
+
+.wallpaper-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	max-height: 88px;
+	overflow-y: auto;
+	margin-bottom: 0.75rem;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #f0f0f0;
+	border-right: 2px solid #f0f0f0;
+	background-color: #FCFCFC;
+}
+
+.wallpaper-option {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.25rem 0.4rem;
+	border: 1px solid transparent;
+	background: transparent;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+
+.wallpaper-option.is-selected {
+	border-color: #000080;
+	background: #0000a0;
+	border: #FCFC00 2px dotted;
+	color: #fff;
+}
+
+.wallpaper-option.is-selected .wallpaper-swatch {
+	border-color: #fff;
+}
+
+.wallpaper-swatch {
+	flex: 0 0 44px;
+	height: 28px;
+	border: 1px solid #666;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.screen-overlay {
+	position: relative;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.screen-frame {
+	display: block;
+	position: relative;
+	z-index: 1;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+.screen-content {
+	position: absolute;
+	left: 16px;
+	top: 17px;
+	width: 136px;
+	height: 96px;
+	overflow: hidden;
+	background-color: #000;
+	background-repeat: repeat;
+	background-position: top left;
+	background-size: auto;
+	image-rendering: pixelated;
+	background-clip: padding-box;
+	z-index: 0;
+}
+
+#wallpaper-screen::first-letter {
+	text-decoration: underline;
+}
+
+#wallpaper-display-style-text::first-letter {
+	text-decoration: underline;
+}
+
+.wallpaper-display-style {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding-top: 0.25rem;
+}
+
+.wallpaper-display-style p {
+	margin: 0;
+	flex: 0 0 auto;
+}
+
+.wallpaper-display-style-options {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.wallpaper-display-style .field-row {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0px;
+}
+
+.wallpaper-display-style .field-row input {
+	margin: 0;
+}
+
+.wallpaper-display-style .field-row label {
+	line-height: 1;
+}
+
+.wallpaper-list::-webkit-scrollbar-button:start:increment,
+.wallpaper-list::-webkit-scrollbar-button:end:decrement {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.display-action-button {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	padding-top: 0.25rem;
+}

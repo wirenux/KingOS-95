@@ -4,6 +4,8 @@ import '../desktop.css'
 import { ExplorerApp } from './ExplorerApp.js'
 import { CaineApp } from './CaineApp.js'
 import { ErrorWindow } from './ErrorWindow.js'
+import { ControlPanel } from './ControlPanel.js'
+import { DisplayApp } from './DisplaySettings.js'
 import { WindowManager } from './WindowManager.js'
 import { PurgeAIProgram } from './PurgeAIProgram.js'
 import { BrowserApp } from './NetscapeApp.js'
@@ -13,6 +15,8 @@ const APP_REGISTRY = {
   caine: CaineApp,
   purge: PurgeAIProgram,
   error: ErrorWindow,
+  settings: ControlPanel,
+  display: DisplayApp,
   bin: {
     ...ExplorerApp,
     title: 'Recycle Bin',
@@ -210,8 +214,7 @@ export function renderDesktop(parent, changeState) {
   const externalLinks = {
     programs: 'https://github.com/wirenux/KingOS-95',
     favorites: 'https://stardance.hackclub.com/projects/23455',
-    documents: 'https://github.com/wirenux',
-    settings: 'https://stardance.hackclub.com'
+    documents: 'https://github.com/wirenux'
   };
 
   // Start menu item

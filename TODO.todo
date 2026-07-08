@@ -54,9 +54,12 @@
 - [x] send mail to glitch to present my project + youtuber
 
 - [ ] add warning for epilepsy
-- [ ] add a settings app like the control panel
+- [x] add a settings app like the control panel
 -   [ ] add on/off switch on crt effect
+-   [x] draw the CRT screen
+-   [ ] make the change actually change the background
 - [ ] make it clear that we can remove the CRT effect (via clippy)
+- [ ] make a .md file for all settings we can change (crt etc...)
 
 - [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on
@@ -70,6 +73,10 @@
 
 - [ ] add AMI like BIOS
 -   [ ] work with keyboard + mouse
+
+- [ ] fix every scroll bar
+
+- [ ] add >! WARNING (in red) for epilespy
 
 - [ ] Minesweeper ?
 - [ ] clippy give hints/advice for minesweeper
