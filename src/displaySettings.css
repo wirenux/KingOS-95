@@ -14,6 +14,11 @@
 	background-size: 62px 60px;
 }
 
+#workspace[data-wallpaper="bubble"] {
+	background-size: 128px 128px;
+}
+
+
 #workspace[data-wallpaper="blue-rivets"],
 #workspace[data-wallpaper="triangle"] {
 	background-size: 32px 32px;

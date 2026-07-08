@@ -97,11 +97,15 @@ export const DisplayApp = {
 
     init(windowEl) {
         const wallpaperOptions = Array.from(windowEl.querySelectorAll('.wallpaper-option'));
+        const crtOnRadio = windowEl.querySelector('#crt-effect-on');
+        const crtOffRadio = windowEl.querySelector('#crt-effect-off');
         const screenContent = windowEl.querySelector('.screen-content');
         const applyButton = windowEl.querySelector('.display-action-button button:last-child');
         const wallpaperMap = this.wallpapers;
         const desktopEl = document.getElementById('workspace');
+        const crtContainer = document.querySelector('#crt');
         let selectedWallpaper = 'none';
+        let selectedCrtEnabled = !crtContainer?.classList.contains('crt-off');
 
         function applyWallpaper(wallpaperName) {
             const wallpaperUrl = wallpaperMap[wallpaperName] || null;
@@ -129,6 +133,28 @@ export const DisplayApp = {
             desktopEl.style.backgroundPosition = 'top left';
         }
 
+        function applyDesktopCrt(enabled) {
+            if (!crtContainer) {
+                return;
+            }
+
+            crtContainer.classList.toggle('container', enabled);
+            crtContainer.classList.toggle('crt-on', enabled);
+            crtContainer.classList.toggle('crt-off', !enabled);
+        }
+
+        function selectCrt(enabled) {
+            selectedCrtEnabled = enabled;
+
+            if (crtOnRadio) {
+                crtOnRadio.checked = enabled;
+            }
+
+            if (crtOffRadio) {
+                crtOffRadio.checked = !enabled;
+            }
+        }
+
         function selectWallpaper(selectedOption) {
             selectedWallpaper = selectedOption.dataset.wallpaper || 'none';
 
@@ -145,10 +171,15 @@ export const DisplayApp = {
             option.addEventListener('click', () => selectWallpaper(option));
         });
 
+        crtOnRadio?.addEventListener('change', () => selectCrt(true));
+        crtOffRadio?.addEventListener('change', () => selectCrt(false));
+
         applyButton?.addEventListener('click', () => {
             applyDesktopWallpaper(selectedWallpaper);
+            applyDesktopCrt(selectedCrtEnabled);
         });
 
+        selectCrt(selectedCrtEnabled);
         applyWallpaper('none');
     }
 }

@@ -5,10 +5,12 @@ import { renderDesktop } from './components/DesktopScreen';
 import { renderBootScreen } from './components/BootScreen';
 
 window.addEventListener("load", () => { // enable crt
-    const crt = document.querySelector(".container");
+  const crt = document.querySelector("#crt");
+    crt.classList.add("container");
     crt.classList.add("crt-off");
 
     setTimeout(() => {
+      crt.classList.add("container");
       crt.classList.remove("crt-off");
       crt.classList.add("crt-on");
     }, 300);
@@ -85,7 +87,7 @@ export function changeState(newState) {
 
   const appContainer = document.querySelector("#app")
   const biosRoot = document.getElementById('bios-root')
-  const crtContainer = document.querySelector(".container")
+  const crtContainer = document.querySelector("#crt")
 
   appContainer.innerHTML = ''
   if (biosRoot) {
