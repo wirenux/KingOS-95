@@ -18,7 +18,6 @@
 	background-size: 128px 128px;
 }
 
-
 #workspace[data-wallpaper="blue-rivets"],
 #workspace[data-wallpaper="triangle"] {
 	background-size: 32px 32px;
@@ -131,7 +130,7 @@
 	text-decoration: underline;
 }
 
-#wallpaper-display-style-text::first-letter {
+#crt-effect-text::first-letter {
 	text-decoration: underline;
 }
 

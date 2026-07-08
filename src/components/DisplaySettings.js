@@ -32,9 +32,9 @@ export const DisplayApp = {
                         </div>
                         <div class="display-settings-panels">
                             <fieldset>
-                                <legend id="wallpaper-screen">Settings</legend>
+                                <legend id="settings-screen">Settings</legend>
                                 <div class="wallpaper-display-style">
-                                    <p id="wallpaper-display-style-text">CRT Effect:</p>
+                                    <p id="crt-effect-text">CRT Effect:</p>
                                     <div class="wallpaper-display-style-options">
                                         <div class="field-row">
                                             <input id="crt-effect-on" name="crt-effect" type="radio" checked>
@@ -70,7 +70,7 @@ export const DisplayApp = {
                                     </button.default>
                                 </div>
                                 <div class="wallpaper-display-style">
-                                    <p id="wallpaper-display-style-text">Display:</p>
+                                    <p id="wallpaper-display-text">Display:</p>
                                     <div class="wallpaper-display-style-options">
                                         <div class="field-row">
                                             <input id="wallpaper-display-tile" name="wallpaper-display-style" type="radio" checked>
