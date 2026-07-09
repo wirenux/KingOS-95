@@ -22,7 +22,7 @@ export const BrowserApp = {
                 <button.default class="option-bar-btn">Help</button.default>
             </div>
 
-            <hr />
+            <hr class="netscape-hr"/>
 
             <div class="toolbar-wrapper">
                 <div class="toolbar-left-column">

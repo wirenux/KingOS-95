@@ -106,6 +106,21 @@ export const ExplorerApp = {
                     <button.default class="option-bar-btn" type="button">View</button.default>
                     <button.default class="option-bar-btn" type="button">Help</button.default>
                 </div>
+                <hr />
+                <div class="toolbar">
+                    <div id="address-bar">
+                        <img src="/icons/littleFolder.png" width=24 style="padding:0 2px"/>
+                        <span id="address-bar-path">${currentPath}</span>
+                        <button.default class="address-arrow-btn"></button.default>
+                    </div>
+                    <button.default id="upFolderBtn"></button.default>
+
+                    <button.default id="cutBtn"></button.default>
+                    <button.default id="copyBtn"></button.default>
+                    <button.default id="pasteBtn"></button.default>
+
+                    <button.default id="undoBtn"></button.default>
+                </div>
                 <div class="explorer-content">
                     ${itemsMarkup}
                 </div>
@@ -130,6 +145,20 @@ export const ExplorerApp = {
         const explorerContent = windowEl.querySelector('.explorer-content');
         const statusCount = windowEl.querySelector('.js-status-count');
         const statusSize = windowEl.querySelector('.js-status-size');
+        const upFolderBtn = windowEl.querySelector('#upFolderBtn');
+
+        upFolderBtn.addEventListener('click', () => {
+            if (currentPath === ROOT_PATH) context.openError?.('Error: You are already to the high folder');;
+
+            const lastBackslashIndex = currentPath.lastIndexOf("\\");
+
+            if (lastBackslashIndex > 2) {
+                const nextPath = currentPath.substring(0, lastBackslashIndex);
+
+                windowEl.dataset.explorerPath = nextPath;
+                renderExplorerWindow(windowEl);
+            }
+        });
 
         const totalObjects = itemElements.length;
         const totalSizeKB = itemElements.reduce((total, item) => {
@@ -205,6 +234,10 @@ export const ExplorerApp = {
 
                 if (item.dataset.name === 'CAINE') {
                     context.openApp?.('caine');
+                }
+
+                else if (item.dataset.type === 'file') {
+                    context.openError?.('Error: Not implemented yet');
                 }
             });
         });

@@ -40,7 +40,7 @@
     outline: none;
 }
 
-hr {
+.netscape-hr {
     border: none;
     border-top: 2px solid #A6A6A6;
     border-bottom: 2px solid #E9E9E9;

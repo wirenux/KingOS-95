@@ -58,6 +58,7 @@
 -   [x] add on/off switch on crt effect
 -   [x] draw the CRT screen
 -   [x] make the change actually change the background
+-   [ ] ok || cancel btn close the window
 - [ ] make it clear that we can remove the CRT effect (via clippy + markdown)
 - [ ] make a .md file for all settings we can change (crt etc...)
 
@@ -65,11 +66,12 @@
 
 - [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on
-- ?[ ]? add a ? button on the right side of the password input
+- [ ] remove the password type and add a placholder with 'queenie123' or 'Leave Empty'
 
-- [ ] add go back in explorer under File>Go back
+- [x] add tools bar
+-   [x] add go back in explorer
 - [ ] make every folder / file do somethings
-- [ ] for file with no action -> Error: No implemented yet
+- [x] for file with no action -> Error: No implemented yet
 - [ ] add clippy
 -   [ ] make clippy say : If you want the original things do : blablabla
 
