@@ -61,7 +61,7 @@
 - [ ] make it clear that we can remove the CRT effect (via clippy + markdown)
 - [ ] make a .md file for all settings we can change (crt etc...)
 
-- [ ] add the netscape animation gif
+- [x] add the netscape animation gif
 
 - [ ] add clippy giving the password + username on login screen
 - [ ] make type anythings log on

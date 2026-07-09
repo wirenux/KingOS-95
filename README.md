@@ -135,6 +135,7 @@ KingOS 95 should be running at `localhost:5173`
 
 > [!WARNING]
 > KingOS 95 mainly targets Chromium and Firefox, but should work on most browser. For a list of know browser specific quirks check [this document](BrowserQuirks.md).
+
 </details>
 
 ### Use of AI

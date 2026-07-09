@@ -228,15 +228,11 @@ hr {
     width: 82px;
     height: 82px;
     background-color: #000000;
+    position: relative;
     cursor: pointer;
     outline: none;
     padding: 0;
     box-sizing: border-box;
-
-    background-image: url('/icons/Netscape_icon.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
     border-top: 2px solid #000;
     border-left: 2px solid #000;
@@ -251,6 +247,16 @@ hr {
     border-right: 2px solid #000;
 }
 
+.netscape-throbber-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
 .netscape-app-container {
     display: flex;
     flex-direction: column;
@@ -262,6 +268,7 @@ hr {
 
 .browser-viewport {
     margin-top: 6px;
+    position: relative;
     flex-grow: 1;
     height: auto;
     overflow: hidden;
@@ -278,4 +285,15 @@ hr {
     border: none;
     display: block;
     background-color: #FCFCFC;
+}
+
+.netscape-intro-video {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+    max-width: 100%;
+    height: auto;
 }

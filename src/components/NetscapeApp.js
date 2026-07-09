@@ -45,7 +45,11 @@ export const BrowserApp = {
                 </div>
 
                 <div class="toolbar-right-column">
-                    <button.default class="netscape-throbber"></button.default>
+                    <button.default class="netscape-throbber" aria-label="Play Netscape animation">
+                        <video class="netscape-throbber-video" autoplay muted loop playsinline preload="auto" hidden>
+                            <source src="/video/netscape.mp4" type="video/mp4">
+                        </video>
+                    </button.default>
                 </div>
             </div>
 
@@ -73,8 +77,24 @@ export const BrowserApp = {
         const forwardBtn = windowEl.querySelector('.btn-forward');
         const homeBtn = windowEl.querySelector('.btn-home');
         const refreshBtn = windowEl.querySelector('.btn-refresh');
+        const throbberBtn = windowEl.querySelector('.netscape-throbber');
+        const introVideo = windowEl.querySelector('.netscape-throbber-video');
 
         const titlebarText = windowEl.querySelector('.titlebar-title');
+
+        function playIntroAnimation() {
+            if (!introVideo) return;
+
+            introVideo.hidden = false;
+            introVideo.currentTime = 0;
+
+            const playPromise = introVideo.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch((error) => {
+                    console.warn('Unable to play Netscape intro animation:', error);
+                });
+            }
+        }
 
         function navigateTo(url) {
             if (!url.trim()) return;
@@ -115,6 +135,10 @@ export const BrowserApp = {
 
         if (refreshBtn) {
             refreshBtn.addEventListener('click', () => { iframe.src = iframe.src; });
+        }
+
+        if (throbberBtn) {
+            throbberBtn.addEventListener('click', playIntroAnimation);
         }
 
         navigateTo('wirenux.github.io/blog');

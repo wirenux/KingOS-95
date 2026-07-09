@@ -80,7 +80,7 @@ const AppState = {
   DESKTOP: 'DESKTOP'
 }
 
-let currentState = AppState.BOOT;
+let currentState = AppState.DESKTOP;
 
 export function changeState(newState) {
   currentState = newState
