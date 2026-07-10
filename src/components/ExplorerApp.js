@@ -187,10 +187,6 @@ export const ExplorerApp = {
             const nextPath = joinPath(currentPath, folderName);
             const nextItems = getDirectoryItems(nextPath);
 
-            if (nextItems.length === 0) {
-                return;
-            }
-
             windowEl.dataset.explorerPath = nextPath;
             renderExplorerWindow(windowEl);
         }

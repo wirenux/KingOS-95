@@ -70,10 +70,12 @@
 
 - [x] add tools bar
 -   [x] add go back in explorer
-- [ ] make every folder / file do somethings
+- [x] make every folder / file do somethings
 - [x] for file with no action -> Error: No implemented yet
 - [ ] add clippy
 -   [ ] make clippy say : If you want the original things do : blablabla
+
+- [ ] add tools bar to the terminal
 
 - [ ] add AMI like BIOS
 -   [ ] work with keyboard + mouse
