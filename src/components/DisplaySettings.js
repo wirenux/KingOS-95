@@ -85,8 +85,8 @@ export const DisplayApp = {
                             </fieldset>
                         </div>
                         <div class="display-action-button">
-                            <button type="button">OK</button>
-                            <button type="button">Cancel</button>
+                            <button type="button" id="ok-display-btn">OK</button>
+                            <button type="button" id="close-display-btn">Cancel</button>
                             <button type="button">Apply</button>
                         </div>
                     </div>
@@ -106,6 +106,22 @@ export const DisplayApp = {
         const crtContainer = document.querySelector('#crt');
         let selectedWallpaper = 'none';
         let selectedCrtEnabled = !crtContainer?.classList.contains('crt-off');
+        const okDisplayBtn = document.getElementById('ok-display-btn');
+        const closeDisplayBtn = document.getElementById('close-display-btn');
+
+        okDisplayBtn.addEventListener("click", () => {
+            const closeButton = windowEl.querySelector('[aria-label="Close"]');
+            if (closeButton) {
+                closeButton.click();
+            }
+        });
+
+        closeDisplayBtn.addEventListener("click", () => {
+            const closeButton = windowEl.querySelector('[aria-label="Close"]');
+            if (closeButton) {
+                closeButton.click();
+            }
+        });
 
         function applyWallpaper(wallpaperName) {
             const wallpaperUrl = wallpaperMap[wallpaperName] || null;

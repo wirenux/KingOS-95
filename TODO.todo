@@ -58,7 +58,7 @@
 -   [x] add on/off switch on crt effect
 -   [x] draw the CRT screen
 -   [x] make the change actually change the background
--   [ ] ok || cancel btn close the window
+-   [x] ok || cancel btn close the window
 - [ ] make it clear that we can remove the CRT effect (via clippy + markdown)
 - [ ] make a .md file for all settings we can change (crt etc...)
 
