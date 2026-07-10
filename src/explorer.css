@@ -202,7 +202,6 @@ hr {
 #copyBtn,
 #undoBtn,
 #cutBtn {
-    background-image: url("/icons/FolderUp.png");
     background-repeat: no-repeat;
     background-position: center;
     flex-shrink: 0;

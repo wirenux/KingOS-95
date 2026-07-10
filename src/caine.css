@@ -13,7 +13,7 @@
     color: #fcfcfc;
 
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     font-family: 'ModernDOS';
     box-sizing: border-box;
     padding: 10px;
@@ -77,4 +77,104 @@
     display: none !important;
     width: 0 !important;
     height: 0 !important;
+}
+
+#size-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+    height: 32px;
+    width: 128px;
+    font-family: 'W95F', sans-serif;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #FCFCFC;
+    border-right: 2px solid #FCFCFC;
+    font-size: 16px;
+    color: black;
+    background-color: #FCFCFC;
+}
+
+#size-bar-path {
+    padding-right: 10px;
+}
+
+#selectionBtn,
+#copyBtn,
+#pasteBtn,
+#moveBtn,
+#selectionMenuBtn,
+#newWindowBtn,
+#fontBtn {
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #FCFCFC;
+    border-left: 2px solid #FCFCFC;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+#selectionBtn:active,
+#copyBtn:active,
+#pasteBtn:active,
+#moveBtn:active,
+#selectionMenuBtn:active,
+#newWindowBtn:active,
+#fontBtn:active {
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #FCFCFC;
+    border-right: 2px solid #FCFCFC;
+    background-position: calc(50% + .5px) calc(50% + .5px);
+}
+
+#selectionBtn {
+    background-image: url("/icons/selection.png");
+    background-size: 24px 22px;
+    margin-left: 4px;
+}
+
+#moveBtn {
+    background-image: url("/icons/move.png");
+    background-size: 24px 22px;
+    margin-left: 10px;
+}
+
+#copyBtn {
+    background-image: url("/icons/Copy.png");
+    background-size: 24px 22px;
+    margin: 0;
+}
+
+#pasteBtn {
+    background-image: url("/icons/Paste.png");
+    background-size: 24px 22px;
+    margin: 0;
+}
+
+#selectionMenuBtn {
+    background-image: url("/icons/selectionMenu.png");
+    background-size: 22px 20px;
+    margin-left: 10px;
+}
+
+#newWindowBtn {
+    background-image: url("/icons/newWindow.png");
+    background-size: 22px 22px;
+}
+
+#fontBtn {
+    background-image: url("/icons/font.png");
+    background-size: 22px 20px;
+    margin-left: 10px;
 }

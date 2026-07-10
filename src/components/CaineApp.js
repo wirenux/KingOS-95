@@ -101,12 +101,30 @@ export const CaineApp = {
 
     render(windowEl) {
         return `
-            <div id="terminal-container">
-                <div class="terminal-history" aria-live="polite"></div>
-                <form class="terminal-live-row" autocomplete="off">
-                    <span class="terminal-prompt">${ROOT_PROMPT}</span>
-                    <input class="terminal-input" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" />
-                </form>
+            <div class="caine-app-wrapper" style="display: flex; flex-direction: column; height: 100%;">
+                <div class="toolbar">
+                    <div id="size-bar">
+                        <span id="size-bar-path">8 x 12</span>
+                        <button.default class="address-arrow-btn" type="button"></button.default>
+                    </div>
+                    <button.default id="selectionBtn" type="button"></button.default>
+                    <button.default id="copyBtn" type="button"></button.default>
+                    <button.default id="pasteBtn" type="button"></button.default>
+
+                    <button.default id="moveBtn" type="button"></button.default>
+
+                    <button.default id="selectionMenuBtn" type="button"></button.default>
+                    <button.default id="newWindowBtn" type="button"></button.default>
+
+                    <button.default id="fontBtn" type="button"></button.default>
+                </div>
+                <div id="terminal-container" style="flex: 1 1 auto;">
+                    <div class="terminal-history" aria-live="polite"></div>
+                    <form class="terminal-live-row" autocomplete="off">
+                        <span class="terminal-prompt">${ROOT_PROMPT}</span>
+                        <input class="terminal-input" type="text" spellcheck="false" autocapitalize="off" autocomplete="off" />
+                    </form>
+                </div>
             </div>
         `;
     },

@@ -75,7 +75,8 @@
 - [ ] add clippy
 -   [ ] make clippy say : If you want the original things do : blablabla
 
-- [ ] add tools bar to the terminal
+- [x] add tools bar to the terminal
+-   [x] draw every icon
 
 - [ ] add the Digital Circus App on the desktop
 
