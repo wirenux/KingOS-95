@@ -65,8 +65,8 @@
 - [x] add the netscape animation gif
 
 - [ ] add clippy giving the password + username on login screen
-- [ ] make type anythings log on
-- [ ] remove the password type and add a placholder with 'queenie123' or 'Leave Empty'
+- [x] make type anythings log on
+- [x] remove the password type and add a placholder with 'queenie123' or 'Leave Empty'
 
 - [x] add tools bar
 -   [x] add go back in explorer

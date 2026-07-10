@@ -26,7 +26,7 @@ export function renderLoginScreen(parent, changeState) {
                     </div>
                     <div class="field-row login-field">
                         <label for="password"><span class="underline">P</span>assword:</label>
-                        <input id="password" name="password" type="password"/>
+                        <input id="password" name="password" type="text" placeholder="queenie123 or Leave empty"/>
                     </div>
                 </div>
 
@@ -43,12 +43,11 @@ export function renderLoginScreen(parent, changeState) {
         e.preventDefault();
 
         const username = loginForm.username.value;
-        const password = loginForm.password.value;
 
-        if (username === 'kinger' && password === "queenie123") {
+        if (username === 'kinger') {
             changeState('DESKTOP');
         }
-    })
+    });
 
     const cancelButton = document.getElementById('login-cancel');
     cancelButton.addEventListener('click', () => {
