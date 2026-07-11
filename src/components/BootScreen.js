@@ -12,7 +12,7 @@ export function renderBootScreen(parent, changeState) {
                 <div class="epa-text">EPA POLLUTION PREVENTER</div>
             </div>
 
-            <div id="bios-content">
+            <div id="boot-content">
                 <img id="bios-man" src="/images/BIOS_Logo.png"/>
                 <div id="bios-text"></div>
             </div>

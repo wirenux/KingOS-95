@@ -1,8 +1,121 @@
 #bios-container {
-    background-color: #0000ff;
-    font-family: 'Perfect';
+    background-color: #0000a8;
+    color: #ffffff;
+    font-family: 'ModernDOS';
+    font-size: 24px;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#bios-title {
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#bios-title p {
+    margin: 0;
+}
+
+#bios-tabs {
+    display: flex;
+    padding: 0 15px;
+}
+
+.bios-tab {
+    padding: 2px 15px;
+    margin-right: 5px;
+    cursor: default;
+}
+
+.bios-tab.active {
+    background-color: #d0d0d0;
+    color: #0000a8;
+}
+
+#bios-content {
+    flex-grow: 1;
+    background-color: #d0d0d0;
+    color: #000000;
+    margin: 0 15px;
+    border: 4px solid #0000a8;
+    display: flex;
+    box-shadow: 0 0 0 4px #d0d0d0;
+}
+
+#bios-content-main {
+    flex: 6.5;
+    padding: 15px 25px;
+    overflow-y: auto;
+}
+
+.bios-row {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.bios-label {
+    width: 45%;
+}
+
+.bios-value {
+    width: 55%;
+}
+
+.bios-content-divider {
+    width: 2px;
+    background-color: #0000a8;
+}
+
+#bios-content-right {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: #0000a8;
+}
+
+#bios-description {
+    flex-grow: 1;
 }
 
 #desc-ctrl {
-    color: #0000ff;
+    border: none;
+    border-top: 1px solid #0000a8;
+    width: 100%;
+    margin: 15px 0;
+}
+
+#bios-control div {
+    margin-bottom: 4px;
+}
+
+#bios-footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#bios-footer p {
+    margin: 0;
+}
+
+.bios-selectable {
+    padding: 2px 0;
+}
+
+.bios-selectable.bios-selected {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.bios-selectable.bios-selected .bios-value {
+    color: #ffffff;
 }
