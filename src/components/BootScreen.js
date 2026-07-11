@@ -1,8 +1,10 @@
-import '../bios.css'
+import '../boot.css'
 import win95Boot from '/images/win95boot.png'
 import energyLogo from '/icons/Energy_Star_logo.svg'
 
 export function renderBootScreen(parent, changeState) {
+    let interrupted = false;
+
     parent.innerHTML = `
         <div id="bios-screen">
             <div id="bios-logo">
@@ -28,6 +30,14 @@ export function renderBootScreen(parent, changeState) {
         return new Promise(r => setTimeout(r, ms))
     }
 
+    function handleKeyPress(e) {
+        interrupted = true;
+        document.removeEventListener('keydown', handleKeyPress);
+        changeState('BIOS');
+    }
+
+    document.addEventListener('keydown', handleKeyPress);
+
     async function runBiosBoot() {
         await wait(2300)
 
@@ -52,6 +62,7 @@ export function renderBootScreen(parent, changeState) {
         ]
 
         for (let i = 0; i < lines.length; i++) {
+            if (interrupted) return;
             const line = lines[i]
 
             const div = document.createElement('div')
@@ -65,6 +76,7 @@ export function renderBootScreen(parent, changeState) {
                 const ramSpan = parent.querySelector('#bios-ram')
 
                 for (let r = 0; r <= 65536; r += 4096) {
+                    if (interrupted) return;
                     ramSpan.textContent = `${r}KB OK`
                     await wait(70)
                 }
@@ -73,7 +85,10 @@ export function renderBootScreen(parent, changeState) {
             }
         }
 
+        if (interrupted) return;
         await wait(600)
+
+        document.removeEventListener('keydown', handleKeyPress);
 
         biosScreen.classList.add('fade-out')
         await wait(500)
@@ -83,6 +98,8 @@ export function renderBootScreen(parent, changeState) {
     }
 
     async function showWin95Boot() {
+        if (interrupted) return;
+
         parent.innerHTML = `
             <div id="win95-boot-screen" style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: black; transition: opacity 500ms ease-out; opacity: 1;">
                 <img src="${win95Boot}" />

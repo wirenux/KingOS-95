@@ -3,6 +3,7 @@ import "98.css";
 import { renderLoginScreen } from './components/LoginScreen'
 import { renderDesktop } from './components/DesktopScreen';
 import { renderBootScreen } from './components/BootScreen';
+import { renderBIOSScreen } from './components/BIOS';
 
 window.addEventListener("load", () => { // enable crt
   const crt = document.querySelector("#crt");
@@ -76,6 +77,7 @@ export function makeDragable(windowEl, titlebarEl) {
 
 const AppState = {
   BOOT: 'BOOT',
+  BIOS: 'BIOS',
   LOGIN: 'LOGIN',
   DESKTOP: 'DESKTOP'
 }
@@ -101,6 +103,10 @@ export function changeState(newState) {
   switch (currentState) {
     case AppState.BOOT:
       renderBootScreen(document.getElementById('bios-root'), changeState);
+      break
+
+    case AppState.BIOS:
+      renderBIOSScreen(document.getElementById('bios-root'), changeState);
       break
 
     case AppState.LOGIN:
