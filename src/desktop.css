@@ -149,6 +149,10 @@
   background-image: url("/icons/briefcase.png");
 }
 
+.icon-caine {
+  background-image: url("/icons/CaineIcon.png");
+}
+
 #taskbar {
   width: 100%;
   height: 32px;

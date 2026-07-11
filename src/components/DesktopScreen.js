@@ -29,6 +29,13 @@ const APP_REGISTRY = {
     icon: '/icons/briefcase.png',
     startPath: 'C:\\My Briefcase'
   },
+  brokenapp: {
+    ...ErrorWindow,
+    title: 'The Amazing Digital Circus',
+    icon: '/icons/CaineIcon.png',
+    message: 'Error: Not implemented yet',
+    centered: true,
+  },
   networkn: {
     ...ErrorWindow,
     title: 'Error',
@@ -36,7 +43,7 @@ const APP_REGISTRY = {
     message: 'Error: No connection. Please connect to the C&A Server',
     centered: true,
   },
-  inbox: BrowserApp
+  inbox: BrowserApp,
 };
 
 let clockInterval;
@@ -93,6 +100,11 @@ export function renderDesktop(parent, changeState) {
           <div class="desktop-shortcut" data-app="briefcase">
             <div class="shortcut-icon icon-briefcase"></div>
             <div class="shortcut-label">My Briefcase</div>
+          </div>
+
+          <div class="desktop-shortcut" data-app="brokenapp">
+            <div class="shortcut-icon icon-caine"></div>
+            <div class="shortcut-label">The Amazing Digital Circus</div>
           </div>
         </div>
 
