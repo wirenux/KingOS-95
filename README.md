@@ -16,6 +16,8 @@
 > [!CAUTION]
 > **Photosensitivity/Epilepsy Warning**
 > This project features retro CRT screen shaders, flashing animations, and fast-moving visual effects (such as the CAINE animation sequence). If you have a history of epilepsy or photosensitivity, please exercise caution when interacting with the live demo.
+>
+> **Good News:** You can completely disable the CRT and scanline effects! Check out the [Settings & Customization Guide](Settings.md) to learn how to toggle visual effects and protect your eyes.
 
 ## What is KingOS 95?
 
@@ -25,33 +27,51 @@ An entirely local browser-based **Operating System** (**OS**) that is inspired b
 > **Useful Info:**
 > * **Login Credentials:**
 > * * Username: `kinger`
-> * * Password: `queenie123`
+> * * Password: `queenie123` or Leave Empty
 > * **Classic Scenario :** Go to `My Computer` -> `Characters` -> `AI` -> `CAINE`, then spam your keys or `Enter` to trigger the animation loop!
 
-<table align="center">
+<table align="center" border="0">
   <tr>
-    <td align="center"><img src="assets/desktop.png" width="512px"/><br><sub><b>Desktop</b></sub></td>
-    <td align="center"><img src="assets/boot.png" width="570px"/><br><sub><b>Bios Startup</b></sub></td>
-    <td align="center"><img src="assets/login.png" width="512px"/><br><sub><b>Login</b></sub></td>
+    <td colspan="2" align="center">
+      <img src="assets/winBoot.png" width="320px"/><br>
+      <sub><b>Windows Boot screen</b></sub>
+    </td>
+    <td colspan="2" align="center">
+      <img src="assets/boot.png" width="320px"/><br>
+      <sub><b>Startup</b></sub>
+    </td>
+    <td colspan="2" align="center">
+      <img src="assets/login.png" width="320px"/><br>
+      <sub><b>Login</b></sub>
+    </td>
   </tr>
+
   <tr>
     <td colspan="3" align="center">
-      <table border="0">
-        <tr>
-          <td align="center"><img src="assets/winBoot.png" width="512px"/><br><sub><b>Windows Boot screen</b></sub></td>
-          <td style="width: 20px;"></td> <td align="center"><img src="assets/main.png" width="512px"/><br><sub><b>Purge AI Error</b></sub></td>
-        </tr>
-      </table>
+      <img src="assets/desktop.png" width="512px"/><br>
+      <sub><b>Desktop</b></sub>
+    </td>
+    <td colspan="3" align="center">
+      <img src="assets/bios.png" width="512px"/><br>
+      <sub><b>Bios</b></sub>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="6" align="center">
+      <img src="assets/main.png" width="612px"/><br>
+      <sub><b>Purge AI Error</b></sub>
     </td>
   </tr>
 </table>
 
 ## Core feature
 
-* **Custom Vector Window Manager:** A lightweight window manager supporting `zIndex` layering, minimizing, maximizing, draging and resizing window
+* **Custom Vector Window Manager:** A lightweight window manager supporting `zIndex` layering, minimizing, maximizing, dragging and resizing window
 * **Virtual JSON Filesystem Mapping:** Dynamic folder and document structure using only a JSON file
 * **CRT Shader:** Scanline and aesthetic from retro display. Overlays optimized for web performance
 * **Start Menu:** Handles internal application spawns, external link, and direct OS state toggles (Log Off / Shut Down).
+* **BIOS Menu:** You can now open an AMI like BIOS !
 * **Bespoke Digital Circus Ecosystem Applications:**
   * **CaineApp:** The classic Cmd used in the show !
   * **PurgeAIProgram:** The app with the progress bar when Caine is being deleted
