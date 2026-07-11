@@ -88,7 +88,7 @@
 
 - [x] fix boot sequence div css (bios-content -> boot-content)
 
-- [ ] fix every scroll bar
+- [x] fix every scroll bar
 
 - [x] add >! WARNING (in red) for epilespy
 
