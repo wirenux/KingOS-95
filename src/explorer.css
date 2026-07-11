@@ -145,7 +145,7 @@ hr {
     padding: 2px;
 }
 
-#address-bar {
+#path-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -193,7 +193,7 @@ hr {
     background-position: calc(50% + .5px) calc(50% + .5px);
 }
 
-#address-bar-path {
+#path-bar-path {
     padding-right: 10px;
 }
 

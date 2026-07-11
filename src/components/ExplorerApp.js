@@ -108,9 +108,9 @@ export const ExplorerApp = {
                 </div>
                 <hr />
                 <div class="toolbar">
-                    <div id="address-bar">
+                    <div id="path-bar">
                         <img src="/icons/littleFolder.png" width=24 style="padding:0 2px"/>
-                        <span id="address-bar-path">${currentPath}</span>
+                        <span id="path-bar-path">${currentPath}</span>
                         <button.default class="address-arrow-btn"></button.default>
                     </div>
                     <button.default id="upFolderBtn"></button.default>
