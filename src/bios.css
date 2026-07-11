@@ -119,3 +119,45 @@
 .bios-selectable.bios-selected .bios-value {
     color: #ffffff;
 }
+
+#bios-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#bios-popup {
+    background-color: #0000a8;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow: inset 0 0 0 2px #0000a8, inset 0 0 0 4px #ffffff;
+    padding: 30px 50px;
+    text-align: center;
+    min-width: 400px;
+}
+
+#bios-popup-title {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+#bios-popup-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bios-popup-option {
+    padding: 5px 20px;
+}
+
+.bios-popup-option.selected {
+    background-color: #ffffff;
+    color: #0000a8;
+}

@@ -81,10 +81,10 @@
 - [x] add the Digital Circus App on the desktop
 -   [x] draw icon
 
-- [ ] add AMI like BIOS
+- [x] add AMI like BIOS
 -   [x] work with keyboard
 -   [x] make the menu Save & Exit + Main (only)
--   [ ] press ESC -> pop-up "Exit" "Do you want to quit ?" "Yes" "No"
+-   [x] press ESC -> pop-up "Exit" "Do you want to quit ?" "Yes" "No"
 
 - [x] fix boot sequence div css (bios-content -> boot-content)
 

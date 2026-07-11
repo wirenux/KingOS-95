@@ -6,6 +6,9 @@ export function renderBIOSScreen(parent, changeState) {
     let currentTab = 'Main';
     let selectedIndex = 0;
 
+    let isPopupOpen = false;
+    let popupSelectedIndex = 1; // 1 => No; 0 => Yes
+
     const tabData = {
         'Main' : {
             selectable: [
@@ -67,7 +70,7 @@ export function renderBIOSScreen(parent, changeState) {
         }
 
         const selectableItemsHTML = tabData[currentTab].selectable.map((item, index) => {
-            const isSelected = index === selectedIndex ? 'bios-selected' : '';
+            const isSelected = (!isPopupOpen && index === selectedIndex) ? 'bios-selected' : '';
             return `
                 <div class="bios-row bios-selectable ${isSelected}">
                     <div class="bios-label">${item.label}</div>
@@ -77,6 +80,21 @@ export function renderBIOSScreen(parent, changeState) {
         }).join('');
 
         const currentDescription = tabData[currentTab].selectable[selectedIndex].desc;
+
+        let popupHTML = '';
+        if (isPopupOpen) {
+            popupHTML = `
+                <div id="bios-popup-overlay">
+                    <div id="bios-popup">
+                        <div id="bios-popup-title">Exit without saving?</div>
+                        <div id="bios-popup-options">
+                            <span class="bios-popup-option ${popupSelectedIndex === 0 ? 'selected' : ''}">[ Yes ]</span>
+                            <span class="bios-popup-option ${popupSelectedIndex === 1 ? 'selected' : ''}">[ No ]</span>
+                        </div>
+                    </div>
+                </div>
+            `
+        }
 
         parent.innerHTML = `
             <div id="bios-container">
@@ -115,14 +133,39 @@ export function renderBIOSScreen(parent, changeState) {
                 <div id="bios-footer">
                     <p>Version 2.22.1282 Copyright (C) 1996 AMI</p>
                 </div>
+                
+                ${popupHTML}
             </div>
         `;
     }
 
     function handleKeyDown(e) {
+        if (isPopupOpen) {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+                popupSelectedIndex = popupSelectedIndex === 0 ? 1 : 0;
+                render();
+            } else if (e.key === 'Enter') {
+                if (popupSelectedIndex === 0) {
+                    document.removeEventListener('keydown', handleKeyDown);
+                    changeState('BOOT');
+                } else {
+                    isPopupOpen = false;
+                    render();
+                }
+            } else if (e.key === 'Escape') {
+                isPopupOpen = false;
+                render();
+            }
+            return;
+        }
+
         const itemCount = tabData[currentTab].selectable.length;
 
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        if (e.key === 'Escape') {
+            isPopupOpen = true;
+            popupSelectedIndex = 1;
+            render();
+        } else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
             currentTab = currentTab === 'Main' ? 'Save & Exit' : 'Main';
             selectedIndex = 0;
             render();
