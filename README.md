@@ -127,7 +127,7 @@ If you are adding a new file, folder, or application that the user can open via 
 
 * Clone the repository with
 ```bash
-git clone https://github.com/wirenux/KingOS-95
+git clone https://github.com/wirenux/KingOS-95.git
 cd KingOS-95
 ```
 * Then install the dependencies with:
